@@ -39,7 +39,7 @@
 //   );
 // }
 import React from "react";
-import bg from "../assets/bg.png";
+import Primary from "../assets/Primary.png";
 
 export default function DarkSection({ children }) {
   return (
@@ -48,7 +48,7 @@ export default function DarkSection({ children }) {
       style={{
         backgroundImage: `
           linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-          url(${bg})
+          url(${Primary})
         `,
       }}
     >

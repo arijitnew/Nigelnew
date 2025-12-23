@@ -260,8 +260,8 @@ export default function Navbar() {
             >
               <button className="flex items-center gap-1">
                 <span>digital</span>
-                <span className="text-[#e10051]"> / IN</span>
-                <span className="ml-1 mt-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#e10051]" />
+                <span className="text-[#dde82d]"> / IN</span>
+                <span className="ml-1 mt-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#dde82d]" />
               </button>
             </div>
 
@@ -271,23 +271,23 @@ export default function Navbar() {
               onClick={() => setMobileCountryOpen(!mobileCountryOpen)}
             >
               <span>digital</span>
-              <span className="text-[#e10051]"> / IN</span>
-              <span className="ml-1 mt-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#e10051]" />
+              <span className="text-[#dde82d]"> / IN</span>
+              <span className="ml-1 mt-[2px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#dde82d]" />
             </button>
           </div>
 
           {/* DESKTOP NAV */}
           <div className="hidden md:flex items-center gap-8 text-sm text-white">
-            <a href="#" className="hover:text-[#e10051]">About</a>
-            <a href="#" className="hover:text-[#e10051]">Solutions & Work</a>
-            <a href="#" className="hover:text-[#e10051]">Careers</a>
-            <a href="#" className="hover:text-[#e10051]">Contact</a>
+            <a href="#" className="hover:text-[#dde82d]">About</a>
+            <a href="#" className="hover:text-[#dde82d]">Solutions & Work</a>
+            <a href="#" className="hover:text-[#dde82d]">Careers</a>
+            <a href="#" className="hover:text-[#dde82d]">Contact</a>
 
-            <button className="px-5 py-2 border border-[#e10051] text-[#e10051]">
+            <button className="px-5 py-2 border border-[#dde82d] text-[#dde82d]">
               RFP
             </button>
 
-            <button className="px-6 py-2 bg-[#e10051] text-black font-medium">
+            <button className="px-6 py-2 bg-[#dde82d] text-black font-medium">
               Hire us!
             </button>
           </div>
@@ -315,26 +315,6 @@ export default function Navbar() {
           >
             <div className="grid grid-cols-4 gap-12 text-sm text-white">
 
-              {/* NORTH AMERICA */}
-              <div>
-                <h4 className="font-semibold uppercase">North America</h4>
-                <div className="h-px bg-white/20 my-4" />
-                <ul className="space-y-3">
-                  <li className="flex gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                    United States
-                  </li>
-                  <li className="ml-6 flex gap-3 text-white/70">
-                    <span className="mt-2 w-1.5 h-1.5 bg-white/40" />
-                    SMB / Franchise Services
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                    Canada
-                  </li>
-                </ul>
-              </div>
-
               {/* APAC */}
               <div>
                 <h4 className="font-semibold uppercase">APAC</h4>
@@ -342,36 +322,14 @@ export default function Navbar() {
                 <ul className="space-y-3">
                   {["Australia","Hong Kong","India","Japan","Malaysia","Singapore","Taiwan"].map(i => (
                     <li key={i} className="flex gap-3">
-                      <span className={`mt-2 w-1.5 h-1.5 ${i==="India"?"bg-[#e10051]":"bg-white/50"}`} />
-                      <span className={i==="India"?"text-[#e10051]":""}>{i}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* EUROPE */}
-              <div>
-                <h4 className="font-semibold uppercase">Europe</h4>
-                <div className="h-px bg-white/20 my-4" />
-                <ul className="space-y-3">
-                  {["France","Germany","Italy","Netherlands","Spain","United Kingdom"].map(i => (
-                    <li key={i} className="flex gap-3">
-                      <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                      {i}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* LATAM */}
-              <div>
-                <h4 className="font-semibold uppercase">LATAM</h4>
-                <div className="h-px bg-white/20 my-4" />
-                <ul className="space-y-3">
-                  {["Argentina","Brazil","Chile","Colombia","Mexico"].map(i => (
-                    <li key={i} className="flex gap-3">
-                      <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                      {i}
+                      <span
+                        className={`mt-2 w-1.5 h-1.5 ${
+                          i === "India" ? "bg-[#dde82d]" : "bg-white/50"
+                        }`}
+                      />
+                      <span className={i === "India" ? "text-[#dde82d]" : ""}>
+                        {i}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -386,29 +344,8 @@ export default function Navbar() {
           <div className="md:hidden absolute top-full left-0 w-full bg-black border-t border-white/10">
             <div className="flex flex-col px-6 py-6 gap-6 text-white text-sm">
 
-              {/* MOBILE COUNTRY LIST */}
               {mobileCountryOpen && (
                 <div className="bg-[#121212] p-6 space-y-8">
-
-                  {/* NORTH AMERICA */}
-                  <div>
-                    <h4 className="font-semibold uppercase text-sm">North America</h4>
-                    <div className="h-px bg-white/20 my-3" />
-                    <ul className="space-y-3">
-                      <li className="flex gap-3">
-                        <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                        United States
-                      </li>
-                      <li className="ml-6 flex gap-3 text-white/70">
-                        <span className="mt-2 w-1.5 h-1.5 bg-white/40" />
-                        SMB / Franchise Services
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                        Canada
-                      </li>
-                    </ul>
-                  </div>
 
                   {/* APAC */}
                   <div>
@@ -417,36 +354,14 @@ export default function Navbar() {
                     <ul className="space-y-3">
                       {["Australia","Hong Kong","India","Japan","Malaysia","Singapore","Taiwan"].map(item => (
                         <li key={item} className="flex gap-3">
-                          <span className={`mt-2 w-1.5 h-1.5 ${item==="India"?"bg-[#e10051]":"bg-white/50"}`} />
-                          <span className={item==="India"?"text-[#e10051]":""}>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* EUROPE */}
-                  <div>
-                    <h4 className="font-semibold uppercase text-sm">Europe</h4>
-                    <div className="h-px bg-white/20 my-3" />
-                    <ul className="space-y-3">
-                      {["France","Germany","Italy","Netherlands","Spain","United Kingdom"].map(item => (
-                        <li key={item} className="flex gap-3">
-                          <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* LATAM */}
-                  <div>
-                    <h4 className="font-semibold uppercase text-sm">LATAM</h4>
-                    <div className="h-px bg-white/20 my-3" />
-                    <ul className="space-y-3">
-                      {["Argentina","Brazil","Chile","Colombia","Mexico"].map(item => (
-                        <li key={item} className="flex gap-3">
-                          <span className="mt-2 w-1.5 h-1.5 bg-white/50" />
-                          {item}
+                          <span
+                            className={`mt-2 w-1.5 h-1.5 ${
+                              item === "India" ? "bg-[#dde82d]" : "bg-white/50"
+                            }`}
+                          />
+                          <span className={item === "India" ? "text-[#dde82d]" : ""}>
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -455,17 +370,16 @@ export default function Navbar() {
                 </div>
               )}
 
-              {/* MAIN LINKS */}
               <a href="#">About</a>
               <a href="#">Solutions & Work</a>
               <a href="#">Careers</a>
               <a href="#">Contact</a>
 
-              <button className="w-full py-2 border border-[#e10051] text-[#e10051]">
+              <button className="w-full py-2 border border-[#dde82d] text-[#dde82d]">
                 RFP
               </button>
 
-              <button className="w-full py-2 bg-[#e10051] text-black font-medium">
+              <button className="w-full py-2 bg-[#dde82d] text-black font-medium">
                 Hire us!
               </button>
             </div>

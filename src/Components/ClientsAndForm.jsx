@@ -270,7 +270,7 @@ export default function ClientsAndForm() {
               >
                 <input
                   type="checkbox"
-                  className="accent-[#e10051]"
+                  className="accent-[#dde82d]"
                 />
                 <span className="text-sm">{item}</span>
               </label>
@@ -285,11 +285,11 @@ export default function ClientsAndForm() {
               block
               w-[180px]
               py-4
-              bg-[#e10051]
-              text-white
+              bg-[#dde82d]
+              text-black
               text-sm
               font-semibold
-              hover:bg-[#c80045]
+              hover:bg-[#c7d51f]
               transition
             "
           >
@@ -317,5 +317,3 @@ export default function ClientsAndForm() {
     </section>
   );
 }
-
-

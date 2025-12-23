@@ -7,8 +7,8 @@ export default function Hero() {
       <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-5xl mx-auto">
         We make sure customers find you <br />
         everywhere from{" "}
-        <span className="text-[#e10051]">Google</span> to{" "}
-        <span className="text-[#e10051]">ChatGPT</span>
+        <span className="text-[#dde82d]">Google</span> to{" "}
+        <span className="text-[#dde82d]">ChatGPT</span>
       </h1>
 
       {/* SUBTEXT */}
@@ -19,10 +19,11 @@ export default function Hero() {
 
       {/* CTA */}
       <div className="mt-10">
-        <button className="px-8 py-3 bg-[#e10051] text-black font-medium rounded hover:bg-[#c80045] transition">
+        <button className="px-8 py-3 bg-[#dde82d] text-black font-medium rounded hover:bg-[#c7d51f] transition">
           Work with us
         </button>
       </div>
     </section>
   );
 }
+

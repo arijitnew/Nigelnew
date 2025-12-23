@@ -33,6 +33,11 @@ import DarkSection from "./Components/DarkSection";
 import Hero from "./Components/Hero";
 import ClientsAndForm from "./Components/ClientsAndForm";
 import AwardsStrip from "./Components/AwardsStrip";
+import WeStatements from "./Components/WeStatements";
+import ProductCards from "./Components/ProductCards";
+import TeamSection from "./Components/TeamSection.jsx";
+
+
 
 export default function App() {
   return (
@@ -50,9 +55,13 @@ export default function App() {
       </DarkSection>
 
       {/* WHITE SECTION */}
-      <section className="bg-[#f3f3f3] text-black py-32 text-center">
-        <h2 className="text-3xl font-bold">We have fun.</h2>
-      </section>
+      <section className="bg-[#f3f3f3] text-black pt-12 pb-24 text-center">
+  <WeStatements />
+  <ProductCards/>
+  <TeamSection/>
+ 
+</section>
+
     </>
   );
 }
