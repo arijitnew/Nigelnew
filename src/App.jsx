@@ -36,8 +36,15 @@ import AwardsStrip from "./Components/AwardsStrip";
 import WeStatements from "./Components/WeStatements";
 import ProductCards from "./Components/ProductCards";
 import TeamSection from "./Components/TeamSection.jsx";
-
-
+import WireframeSection from "./Components/WireframeSection";
+import SolutionsContent from "./Components/SolutionsContent";
+import SolutionsCards from "./Components/SolutionsCards";
+import WorkIntro from "./Components/WorkIntro";
+import WorkVideos from "./Components/WorkVideos";
+import CaseStudiesSlider from "./Components/CaseStudiesSlider";
+import TestimonialsDark from "./Components/TestimonialsDark";
+import RecognitionSection from "./Components/RecognitionSection";
+import CareersSection from "./Components/CareersSection";
 
 export default function App() {
   return (
@@ -59,7 +66,18 @@ export default function App() {
   <WeStatements />
   <ProductCards/>
   <TeamSection/>
- 
+  <WireframeSection>
+<SolutionsContent/>
+<SolutionsCards/>
+</WireframeSection>
+<WorkIntro/>
+<WorkVideos/>
+<CaseStudiesSlider/>
+<DarkSection>
+  <TestimonialsDark/>
+</DarkSection>
+<RecognitionSection/>
+<CareersSection/>
 </section>
 
     </>
