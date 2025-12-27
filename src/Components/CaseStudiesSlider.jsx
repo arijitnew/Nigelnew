@@ -140,7 +140,7 @@
 //   );
 // }
 import React, { useState } from "react";
-import bg from "../assets/wireframe.png";
+import bg from "../assets/Wireframe.png";
 
 const slides = [
   {
