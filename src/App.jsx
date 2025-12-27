@@ -45,15 +45,18 @@ import CaseStudiesSlider from "./Components/CaseStudiesSlider";
 import TestimonialsDark from "./Components/TestimonialsDark";
 import RecognitionSection from "./Components/RecognitionSection";
 import CareersSection from "./Components/CareersSection";
+import CurrentOpenRoles from "./Components/CurrentOpenRoles";
+import OpenRolesList from "./Components/OpenRolesList";
+import ContactSection from "./Components/ContactSection";
+import CTASection from "./Components/CTASection";
+import Footer from "./Components/Footer";
 
 export default function App() {
   return (
     <>
-      {/* DARK AREA */}
+      {/* ================= DARK : HERO ================= */}
       <DarkSection>
         <Navbar />
-
-        {/* push below fixed navbar */}
         <div className="pt-[80px]">
           <Hero />
           <ClientsAndForm />
@@ -61,29 +64,49 @@ export default function App() {
         </div>
       </DarkSection>
 
-      {/* WHITE SECTION */}
-      <section className="bg-[#f3f3f3] text-black pt-12 pb-24 text-center">
-  <WeStatements />
-  <ProductCards/>
-  <TeamSection/>
-  <WireframeSection>
-<SolutionsContent/>
-<SolutionsCards/>
-</WireframeSection>
-<WorkIntro/>
-<WorkVideos/>
-<CaseStudiesSlider/>
-<DarkSection>
-  <TestimonialsDark/>
-</DarkSection>
-<RecognitionSection/>
-<CareersSection/>
-</section>
+      {/* ================= WHITE : MAIN CONTENT ================= */}
+      <section className="bg-[#f3f3f3] text-black pt-12 text-center">
+        <WeStatements />
+        <ProductCards />
+        <TeamSection />
 
+        <WireframeSection>
+          <SolutionsContent />
+          <SolutionsCards />
+        </WireframeSection>
+
+        <WorkIntro />
+        <WorkVideos />
+      </section>
+
+      {/* ================= CASE STUDIES (OWNS ITS BG) ================= */}
+      <CaseStudiesSlider />
+
+      {/* ================= DARK : TESTIMONIALS ================= */}
+      <DarkSection>
+        <TestimonialsDark />
+      </DarkSection>
+
+      {/* ================= WHITE : CAREERS + CONTACT ================= */}
+      {/* ❌ NOTICE: NO pb-24 HERE */}
+      <section className="bg-[#f3f3f3] text-black pt-24 text-center">
+        <RecognitionSection />
+        <CareersSection />
+        <CurrentOpenRoles />
+        <OpenRolesList />
+
+        <WireframeSection>
+          <ContactSection />
+        </WireframeSection>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <CTASection />
+
+      {/* ================= FOOTER ================= */}
+      <DarkSection>
+        <Footer />
+      </DarkSection>
     </>
   );
 }
-
-
-
-

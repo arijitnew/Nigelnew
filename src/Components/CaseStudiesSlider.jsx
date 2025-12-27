@@ -180,23 +180,16 @@ export default function CaseStudiesSlider() {
   const changeSlide = (next) => {
     if (next === active) return;
 
-    // 1️⃣ Exit animation
     setVisible(false);
 
-    // 2️⃣ After exit completes, change slide
     setTimeout(() => {
       setActive(next);
-
-      // 3️⃣ Small pause before entry
-      setTimeout(() => {
-        setVisible(true);
-      }, 300); // delay before appearing
-    }, 600); // exit duration
+      setTimeout(() => setVisible(true), 300);
+    }, 600);
   };
 
   return (
-    <section className="relative w-full h-[520px] overflow-hidden">
-
+    <section className="relative w-full bg-black py-20 overflow-hidden">
       {/* BACKGROUND */}
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
@@ -206,10 +199,10 @@ export default function CaseStudiesSlider() {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 h-full max-w-[1400px] mx-auto px-6 flex items-center">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 flex items-center">
         <div className="max-w-[760px] text-left text-white pl-10">
 
-          {/* TITLE — FROM TOP */}
+          {/* TITLE */}
           <h2
             className={`
               text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight
@@ -230,7 +223,7 @@ export default function CaseStudiesSlider() {
             `}
           />
 
-          {/* DESCRIPTION — FROM BOTTOM */}
+          {/* DESCRIPTION */}
           <p
             className={`
               text-sm md:text-base text-white/90 leading-relaxed mb-8
@@ -245,7 +238,7 @@ export default function CaseStudiesSlider() {
             {slides[active].description}
           </p>
 
-          {/* BUTTON — FROM BOTTOM */}
+          {/* CTA BUTTON */}
           <div
             className={`
               transition-all duration-[1200ms] delay-[350ms]
@@ -257,7 +250,6 @@ export default function CaseStudiesSlider() {
               Contact us to learn more
             </button>
           </div>
-
         </div>
       </div>
 
@@ -309,7 +301,6 @@ export default function CaseStudiesSlider() {
           />
         ))}
       </div>
-
     </section>
   );
 }
