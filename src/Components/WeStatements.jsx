@@ -86,7 +86,7 @@ export default function WeTypingHero() {
   className="text-base font-bold tracking-widest mb-6"
   style={{ color: "#e10051" }}
 >
-  NP DIGITAL INDIA
+  NQ DIGITAL INDIA
 </p>
 
 

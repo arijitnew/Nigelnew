@@ -7,6 +7,29 @@ import seventh from "../assets/seventh.png";
 
 const cards = [
   {
+    title: "Creative",
+    icon: seventh,
+    items: [
+      "Performance Creative",
+      "Branding",
+      "Content Production",
+      "Website Design",
+      "Graphic & Motion Design",
+      "Audio Production",
+    ],
+  },  {
+    title: "Paid Media",
+    icon: sixth,
+    items: [
+      "Media Strategy & Planning",
+      "Paid Search",
+      "Paid Social",
+      "Programmatic & Display",
+      "Marketplaces",
+      "Streaming",
+    ],
+  },
+  {
     title: "Data & Analytics",
     icon: fourth,
     items: [
@@ -32,30 +55,8 @@ const cards = [
       "Email Marketing",
     ],
   },
-  {
-    title: "Paid Media",
-    icon: sixth,
-    items: [
-      "Media Strategy & Planning",
-      "Paid Search",
-      "Paid Social",
-      "Programmatic & Display",
-      "Marketplaces",
-      "Streaming",
-    ],
-  },
-  {
-    title: "Creative",
-    icon: seventh,
-    items: [
-      "Performance Creative",
-      "Branding",
-      "Content Production",
-      "Website Design",
-      "Graphic & Motion Design",
-      "Audio Production",
-    ],
-  },
+
+
 ];
 
 export default function SolutionsCards() {

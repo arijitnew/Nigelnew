@@ -65,19 +65,15 @@ export default function App() {
       </DarkSection>
 
       {/* ================= WHITE : MAIN CONTENT ================= */}
-      <section className="bg-[#f3f3f3] text-black pt-12 text-center">
-        <WeStatements />
-        <ProductCards />
-        <TeamSection />
+      <>
+  <WeStatements />
+  <TeamSection />
 
-        <WireframeSection>
-          <SolutionsContent />
-          <SolutionsCards />
-        </WireframeSection>
-
-        <WorkIntro />
-        <WorkVideos />
-      </section>
+  <WireframeSection>
+    <SolutionsContent />
+    <SolutionsCards />
+  </WireframeSection>
+</>
 
       {/* ================= CASE STUDIES (OWNS ITS BG) ================= */}
       <CaseStudiesSlider />
@@ -89,16 +85,16 @@ export default function App() {
 
       {/* ================= WHITE : CAREERS + CONTACT ================= */}
       {/* ❌ NOTICE: NO pb-24 HERE */}
-      <section className="bg-[#f3f3f3] text-black pt-24 text-center">
-        <RecognitionSection />
+      <>
+        {/* <RecognitionSection />
         <CareersSection />
         <CurrentOpenRoles />
-        <OpenRolesList />
+        <OpenRolesList /> */}
 
         <WireframeSection>
           <ContactSection />
         </WireframeSection>
-      </section>
+     </>
 
       {/* ================= CTA ================= */}
       <CTASection />

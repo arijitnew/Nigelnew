@@ -15,7 +15,7 @@ export default function SolutionsContent() {
       <div className="w-12 h-[3px] bg-black mx-auto mb-8" />
 
       <p className="max-w-[900px] mx-auto text-base md:text-lg leading-relaxed text-white/90">
-        We, at NP Digital India, understand the intent, will, time, efforts,
+        We, at NQ Digital India, understand the intent, will, time, efforts,
         and dreams that are invested in starting and operating a business.
         Hence we leave no stone unturned in shaping it the way you aspire
         and admire. Our team of experts is always keen on formulating only

@@ -203,7 +203,7 @@ import vodien from "../assets/vodian.webp";
 const testimonials = [
   {
     quote:
-      "The Neil Patel team is full of enthusiasm and very receptive to suggestions and inputs and encourages us to contribute to make a useful team outcome.",
+      "The Nigel Quadros team is full of enthusiasm and very receptive to suggestions and inputs and encourages us to contribute to make a useful team outcome.",
     author: "GWD Kids",
     rating: 5,
   },
