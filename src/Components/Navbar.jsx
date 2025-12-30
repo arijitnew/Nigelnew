@@ -544,6 +544,7 @@
 // }
 import React, { useEffect, useState } from "react";
 import icon from "../assets/TRANSP.png";
+import whatsapp from "../assets/whatsapp.svg";
 
 export default function Navbar() {
   const [countryOpen, setCountryOpen] = useState(false);
@@ -633,14 +634,19 @@ export default function Navbar() {
 
               {/* WHATSAPP ICON */}
               <a
-                href="https://wa.me/911234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#dde82d] text-black flex items-center justify-center hover:bg-[#c9d63f] transition"
-                aria-label="WhatsApp"
-              >
-                💬
-              </a>
+  href="https://wa.me/911234567890"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-10 h-10 bg-[#dde82d] flex items-center justify-center hover:bg-[#c9d63f] transition"
+  aria-label="WhatsApp"
+>
+  <img
+    src={whatsapp}
+    alt="WhatsApp"
+    className="w-6 h-6"
+  />
+</a>
+
             </div>
 
             {/* HAMBURGER */}
