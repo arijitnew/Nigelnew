@@ -544,7 +544,7 @@
 // }
 import React, { useEffect, useState } from "react";
 import icon from "../assets/TRANSP.png";
-import whatsapp from "../assets/whatsapp.svg";
+import whatsapp from "../assets/Whatsapp.svg";
 
 export default function Navbar() {
   const [countryOpen, setCountryOpen] = useState(false);
