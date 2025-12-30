@@ -25,15 +25,18 @@ export default function Footer() {
           {/* LOGO + ADDRESS */}
         {/* LOGO + ADDRESS */}
 {/* LOGO + ADDRESS */}
-<div className="-mt-16 md:-mt-24">
+{/* LOGO + ADDRESS */}
+<div className="flex flex-col items-start md:-mt-24">
+
+  {/* LOGO */}
   <img
     src={logo}
     alt="Logo"
-    className="w-48 md:w-56 block"
+    className="w-40 md:w-56 mb-6"
   />
 
   {/* ADDRESS */}
-  <div className="-translate-y-6 md:-translate-y-8 translate-x-6 md:translate-x-10">
+  <div className="md:translate-x-10 md:-translate-y-8">
     <p className="text-sm leading-relaxed text-gray-400">
       119, North Goa, Maharashtra,<br />
       India 403403<br />
