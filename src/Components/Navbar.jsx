@@ -337,7 +337,7 @@
 //   );
 // }
 import React, { useEffect, useState } from "react";
-import placeholderLogo from "../assets/placeholder1.png";
+import icon from "../assets/Icon.png";
 
 export default function Navbar() {
   const [countryOpen, setCountryOpen] = useState(false);
@@ -367,20 +367,23 @@ export default function Navbar() {
         className={`
           fixed top-0 left-0 w-full z-50
           transition-all duration-300
-          ${scrolled ? "bg-black/95 h-[64px]" : "bg-black h-[80px]"}
+          ${scrolled ? "bg-black/95 h-[72px]" : "bg-black h-[96px]"}
         `}
       >
         <div className="relative max-w-[1400px] mx-auto h-full px-6">
           <nav className="h-full flex items-center justify-between">
 
             {/* LOGO + COUNTRY */}
-            <div className="flex items-center gap-4 text-white shrink-0">
+            <div className="flex items-center gap-0 text-white shrink-0">
               <img
-                src={placeholderLogo}
-                alt="NP Digital"
-                className={`object-contain transition-all duration-300 ${
-                  scrolled ? "h-8" : "h-10"
-                }`}
+                src={icon}
+                alt="Icon"
+                className={`
+                  object-contain transition-all duration-300
+                  ${scrolled 
+                    ? "h-10 md:h-12" 
+                    : "h-14 md:h-16"}
+                `}
               />
 
               {/* DESKTOP COUNTRY */}
@@ -390,7 +393,7 @@ export default function Navbar() {
                 onMouseLeave={() => setCountryOpen(false)}
               >
                 <button className="flex items-center gap-1 tracking-wide hover:text-[#dde82d] transition">
-                  <span>digital</span>
+                  <span>Agency</span>
                   <span className="text-[#dde82d]"> / IN</span>
                   <span
                     className="
@@ -448,8 +451,6 @@ export default function Navbar() {
               "
             >
               <div className="grid grid-cols-4 gap-12 text-sm text-white">
-
-                {/* NORTH AMERICA */}
                 <div>
                   <h4 className="font-semibold uppercase">North America</h4>
                   <div className="h-px bg-white/20 my-4" />
@@ -462,7 +463,6 @@ export default function Navbar() {
                   </ul>
                 </div>
 
-                {/* APAC */}
                 <div>
                   <h4 className="font-semibold uppercase">APAC</h4>
                   <div className="h-px bg-white/20 my-4" />
@@ -478,7 +478,6 @@ export default function Navbar() {
                   </ul>
                 </div>
 
-                {/* EUROPE */}
                 <div>
                   <h4 className="font-semibold uppercase">Europe</h4>
                   <div className="h-px bg-white/20 my-4" />
@@ -489,7 +488,6 @@ export default function Navbar() {
                   </ul>
                 </div>
 
-                {/* LATAM */}
                 <div>
                   <h4 className="font-semibold uppercase">LATAM</h4>
                   <div className="h-px bg-white/20 my-4" />
@@ -499,7 +497,6 @@ export default function Navbar() {
                     ))}
                   </ul>
                 </div>
-
               </div>
             </div>
           )}
@@ -508,7 +505,7 @@ export default function Navbar() {
 
       {/* ================= MOBILE MENU ================= */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed top-[80px] left-0 w-full bg-black z-40 border-t border-white/10">
+        <div className="md:hidden fixed top-[96px] left-0 w-full bg-black z-40 border-t border-white/10">
           <div className="flex flex-col px-6 py-6 gap-6 text-white text-sm">
             <a href="#">About</a>
             <a href="#">Solutions & Work</a>
@@ -534,14 +531,16 @@ export default function Navbar() {
           z-30
           pointer-events-none
           transition-all duration-300
-          ${scrolled ? "top-[64px]" : "top-[80px]"}
+          ${scrolled ? "top-[72px]" : "top-[96px]"}
         `}
       >
         <div
-          className="h-full bg-[#dde82d] transition-all duration-200"
+          className="h-full bg-[#dde82d]"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
     </>
   );
 }
+
+

@@ -84,7 +84,7 @@ export default function WeTypingHero() {
       {/* BRAND */}
       <p
   className="text-base font-bold tracking-widest mb-6"
-  style={{ color: "#dde82d" }}
+  style={{ color: "#e10051" }}
 >
   NP DIGITAL INDIA
 </p>
@@ -157,7 +157,7 @@ export default function WeTypingHero() {
   style={{
     width: "64px",
     height: "3px",
-    backgroundColor: "#dde82d",
+    backgroundColor: "#e10051",
   }}
 />
 
