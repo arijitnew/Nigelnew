@@ -201,7 +201,8 @@
 //     </section>
 //   );
 // }
-import React from "react";
+import React, { useState } from "react";
+import WorkWithUsModal from "./WorkWithUsModal";
 
 // LOGOS
 import denzour from "../assets/denzour.webp";
@@ -245,75 +246,87 @@ const services = [
 ];
 
 export default function ClientsAndForm() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <section className="relative max-w-[1400px] mx-auto px-6 pb-32">
-      <div className="grid lg:grid-cols-2 gap-6 items-center">
+    <>
+      <section className="relative max-w-[1400px] mx-auto px-6 pb-32">
+        <div className="grid lg:grid-cols-2 gap-6 items-center">
 
-        {/* FORM — FIRST ON MOBILE */}
-        <div className="order-1 lg:order-2 bg-[#f1f1f1] text-black p-10 shadow-xl">
-          <h3 className="text-xl font-semibold text-center mb-8">
-            How can we help you get found?
-          </h3>
+          {/* FORM */}
+          <div className="order-1 lg:order-2 bg-[#f1f1f1] text-black p-10 shadow-xl">
+            <h3 className="text-xl font-semibold text-center mb-8">
+              How can we help you get found?
+            </h3>
 
-          {/* FORM GRID */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {services.map((item) => (
-              <label
-                key={item}
-                className="
-                  flex items-center gap-3
-                  bg-white px-4 py-3
-                  cursor-pointer
-                  hover:shadow-sm
-                  transition
-                "
+            {/* SERVICES */}
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+              {services.map((item) => (
+                <label
+                  key={item}
+                  className="
+                    flex items-center gap-3
+                    bg-white px-4 py-3
+                    cursor-pointer
+                    hover:shadow-sm
+                    transition
+                  "
+                >
+                  <input
+                    type="checkbox"
+                    className="accent-[#dde82d]"
+                  />
+                  <span className="text-sm">{item}</span>
+                </label>
+              ))}
+            </div>
+
+            {/* BUTTON */}
+            <button
+              onClick={() => setModalOpen(true)}
+              className="
+                mt-10
+                mx-auto
+                block
+                w-[180px]
+                py-4
+                bg-[#dde82d]
+                text-black
+                text-sm
+                font-semibold
+                hover:bg-[#c7d51f]
+                transition
+              "
+            >
+              Get started
+            </button>
+          </div>
+
+          {/* LOGOS */}
+          <div className="order-2 lg:order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mt-6">
+            {logos.map((logo, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-center py-1"
               >
-                <input
-                  type="checkbox"
-                  className="accent-[#dde82d]"
+                <img
+                  src={logo}
+                  alt=""
+                  className="h-16 md:h-20 object-contain"
                 />
-                <span className="text-sm">{item}</span>
-              </label>
+              </div>
             ))}
           </div>
 
-          {/* BUTTON */}
-          <button
-            className="
-              mt-10
-              mx-auto
-              block
-              w-[180px]
-              py-4
-              bg-[#dde82d]
-              text-black
-              text-sm
-              font-semibold
-              hover:bg-[#c7d51f]
-              transition
-            "
-          >
-            Get started
-          </button>
         </div>
+      </section>
 
-        {/* LOGOS — SECOND ON MOBILE */}
-        <div className="order-2 lg:order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mt-6">
-          {logos.map((logo, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-center py-1"
-            >
-              <img
-                src={logo}
-                alt=""
-                className="h-16 md:h-20 object-contain"
-              />
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
+      {/* WORK WITH US MODAL */}
+      <WorkWithUsModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        title="Work With Us"
+      />
+    </>
   );
 }

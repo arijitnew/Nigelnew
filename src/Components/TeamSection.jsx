@@ -84,7 +84,7 @@ const team = [
   },
   {
     name: "Vivek R",
-    role: "VP of Creative",
+    role: "VP-Creative",
   },
 ];
 

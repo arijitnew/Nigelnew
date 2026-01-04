@@ -551,6 +551,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [rfpOpen, setRfpOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -566,6 +567,11 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // lock scroll when modal open
+  useEffect(() => {
+    document.body.style.overflow = rfpOpen ? "hidden" : "auto";
+  }, [rfpOpen]);
 
   return (
     <>
@@ -599,14 +605,14 @@ export default function Navbar() {
               >
                 <span className="flex items-center text-[#dde82d] leading-none tracking-wide cursor-pointer">
                   / IN
-                  <span
+                  {/* <span
                     className="
                       ml-0.5 mt-[2px] inline-block w-0 h-0
                       border-l-[4px] border-l-transparent
                       border-r-[4px] border-r-transparent
                       border-t-[6px] border-t-[#dde82d]
                     "
-                  />
+                  /> */}
                 </span>
               </div>
             </div>
@@ -619,34 +625,30 @@ export default function Navbar() {
               <a href="#" className="hover:text-[#dde82d]">Contact</a>
 
               {/* RFP */}
-              <button className="px-5 py-2 border border-[#dde82d] text-[#dde82d] hover:bg-[#dde82d] hover:text-black transition">
+              <button
+                onClick={() => setRfpOpen(true)}
+                className="px-5 py-2 border border-[#dde82d] text-[#dde82d] hover:bg-[#dde82d] hover:text-black transition"
+              >
                 RFP
               </button>
 
-              {/* CALL ICON */}
+              {/* CALL */}
               <a
-                href="tel:+911234567890"
-                className="w-10 h-10 bg-[#dde82d] text-black flex items-center justify-center hover:bg-[#c9d63f] transition"
-                aria-label="Call"
+                href="tel:+919665064435"
+                className="w-10 h-10 bg-[#dde82d] text-black flex items-center justify-center hover:bg-[#c9d63f]"
               >
                 📞
               </a>
 
-              {/* WHATSAPP ICON */}
+              {/* WHATSAPP */}
               <a
-  href="https://wa.me/911234567890"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-10 h-10 bg-[#dde82d] flex items-center justify-center hover:bg-[#c9d63f] transition"
-  aria-label="WhatsApp"
->
-  <img
-    src={whatsapp}
-    alt="WhatsApp"
-    className="w-6 h-6"
-  />
-</a>
-
+                href="https://wa.me/919665064435"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-[#dde82d] flex items-center justify-center hover:bg-[#c9d63f]"
+              >
+                <img src={whatsapp} alt="WhatsApp" className="w-6 h-6" />
+              </a>
             </div>
 
             {/* HAMBURGER */}
@@ -660,8 +662,8 @@ export default function Navbar() {
             </button>
           </nav>
 
-          {/* ================= MEGA DROPDOWN ================= */}
-          {countryOpen && (
+          {/* ================= COUNTRY DROPDOWN ================= */}
+          {/* {countryOpen && (
             <div
               onMouseEnter={() => setCountryOpen(true)}
               onMouseLeave={() => setCountryOpen(false)}
@@ -682,9 +684,7 @@ export default function Navbar() {
                   <div className="h-px bg-white/20 my-4" />
                   <ul className="space-y-3">
                     <li>United States</li>
-                    <li className="ml-4 text-white/60">
-                      SMB / Franchise Services
-                    </li>
+                    <li className="ml-4 text-white/60">SMB / Franchise Services</li>
                     <li>Canada</li>
                   </ul>
                 </div>
@@ -694,10 +694,7 @@ export default function Navbar() {
                   <div className="h-px bg-white/20 my-4" />
                   <ul className="space-y-3">
                     {["Australia","Hong Kong","India","Japan","Malaysia","Singapore","Taiwan"].map(item => (
-                      <li
-                        key={item}
-                        className={item === "India" ? "text-[#dde82d]" : ""}
-                      >
+                      <li key={item} className={item === "India" ? "text-[#dde82d]" : ""}>
                         {item}
                       </li>
                     ))}
@@ -725,7 +722,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </header>
 
@@ -738,28 +735,12 @@ export default function Navbar() {
             <a href="#">Careers</a>
             <a href="#">Contact</a>
 
-            <button className="w-full py-2 border border-[#dde82d] text-[#dde82d]">
+            <button
+              onClick={() => setRfpOpen(true)}
+              className="w-full py-2 border border-[#dde82d] text-[#dde82d]"
+            >
               RFP
             </button>
-
-            <div className="flex gap-4">
-              <a
-                href="tel:+911234567890"
-                className="flex-1 py-3 bg-[#dde82d] text-black text-center"
-                aria-label="Call"
-              >
-                📞
-              </a>
-              <a
-                href="https://wa.me/911234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 py-3 bg-[#dde82d] text-black text-center"
-                aria-label="WhatsApp"
-              >
-                💬
-              </a>
-            </div>
           </div>
         </div>
       )}
@@ -768,10 +749,7 @@ export default function Navbar() {
       <div
         className={`
           fixed left-0 w-full h-[2px]
-          bg-white/10
-          z-30
-          pointer-events-none
-          transition-all duration-300
+          bg-white/10 z-30 pointer-events-none
           ${scrolled ? "top-[72px]" : "top-[96px]"}
         `}
       >
@@ -780,7 +758,130 @@ export default function Navbar() {
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
+
+      {/* ================= RFP MODAL ================= */}
+{/* ================= RFP MODAL ================= */}
+{rfpOpen && (
+  <div className="fixed inset-0 z-[100] flex items-center justify-center">
+
+    {/* OVERLAY */}
+    <div
+      className="absolute inset-0 bg-black/70"
+      onClick={() => setRfpOpen(false)}
+    />
+
+    {/* MODAL */}
+    <div className="relative bg-white w-[94%] max-w-[860px] rounded-sm shadow-2xl px-16 py-10 z-10">
+
+      {/* CLOSE */}
+      <button
+        onClick={() => setRfpOpen(false)}
+        className="absolute top-6 right-6 text-black text-2xl font-light"
+      >
+        ✕
+      </button>
+
+      {/* LOGO */}
+    {/* LOGO (force positioned) */}
+<div className="relative flex justify-center mb-1">
+  <img
+    src={icon}
+    alt="Logo"
+    className="
+      absolute
+      top-0
+      h-[140px]
+      object-contain
+      -translate-y-4
+    "
+  />
+</div>
+
+
+      {/* TITLE */}
+      <h2 className="text-center text-3xl font-extrabold text-black mt-20 mb-2">
+  RFP Form
+</h2>
+
+
+      {/* SUBTITLE */}
+      <p className="text-center text-sm text-black/60 mb-8">
+        Fill out the form below to speak with someone from our team.
+      </p>
+
+      {/* FORM */}
+      <form className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+        <input
+          type="email"
+          placeholder="Email"
+          className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+        />
+
+<div className="flex border border-gray-200 bg-gray-50">
+  <div className="flex items-center gap-2 px-4 text-sm border-r border-gray-200">
+    🇮🇳 <span className="text-black/70">+91</span>
+  </div>
+
+  <input
+    type="tel"
+    inputMode="numeric"
+    pattern="[0-9]*"
+    maxLength={10}
+    onInput={(e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    }}
+    className="flex-1 px-4 py-3 text-sm bg-transparent outline-none"
+    placeholder="Enter mobile number"
+  />
+</div>
+
+
+        <input
+          type="text"
+          placeholder="First Name"
+          className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+        />
+
+        <input
+          type="text"
+          placeholder="Last Name"
+          className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+        />
+
+        <input
+          type="url"
+          placeholder="Website URL?"
+          className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+        />
+
+        <input
+          type="text"
+          placeholder="Monthly Marketing Budget"
+          className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+        />
+      </form>
+
+      {/* DISCLAIMER */}
+      <p className="text-[11px] text-black/50 leading-relaxed mt-6">
+      By clicking the button below, you consent for Agency by Nigel Quadros and partners to use automated technology, including pre-recorded messages, cell phones and texts, and email to contact you at the number and email address provided. This includes if the number is currently on any Do Not Call Lists. This consent is not required to make a purchase. Privacy Policy.
+      </p>
+
+      {/* SUBMIT */}
+      <div className="flex justify-end mt-8">
+        <button
+          type="submit"
+          className="bg-[#dde82d] text-white px-10 py-3 text-sm font-semibold hover:bg-[#dde82d] transition"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
+
     </>
   );
 }
+
 

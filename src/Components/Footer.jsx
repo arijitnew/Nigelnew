@@ -83,7 +83,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">SOCIAL</h4>
 
             <div className="flex items-center gap-3">
-              <img
+              {/* <img
                 src={facebook}
                 alt="Facebook"
                 className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
@@ -97,17 +97,17 @@ export default function Footer() {
                 src={twitter}
                 alt="Twitter"
                 className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
-              />
+              /> */}
               <img
                 src={linkedin}
                 alt="LinkedIn"
                 className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
               />
-              <img
+              {/* <img
                 src={youtube}
                 alt="YouTube"
                 className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
-              />
+              /> */}
             </div>
           </div>
 
@@ -115,9 +115,10 @@ export default function Footer() {
 
         {/* ================= PARTNER LOGOS ================= */}
         <div className="mt-20 flex flex-wrap items-center justify-center gap-16">
-          <img
-            src={google}
-            alt="Google Partner"
+     
+        <img
+            src={amazon}
+            alt="Amazon Partner"
             className="h-12 md:h-16 object-contain"
           />
           <img
@@ -130,11 +131,12 @@ export default function Footer() {
             alt="Microsoft Partner"
             className="h-12 md:h-16 object-contain"
           />
-          <img
-            src={amazon}
-            alt="Amazon Partner"
+               <img
+            src={google}
+            alt="Google Partner"
             className="h-12 md:h-16 object-contain"
           />
+        
           <img
             src={nmsdc}
             alt="NMSDC"
