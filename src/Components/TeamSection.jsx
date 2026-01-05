@@ -74,24 +74,30 @@
 //     </section>
 //   );
 // }
-import React from "react";
-import placeholder from "../assets/placeholder1.png";
+import React, { useEffect, useState } from "react";
 
-const team = [
-  {
-    name: "Nigel Quadros",
-    role: "Managing Director",
-  },
-  {
-    name: "Vivek R",
-    role: "VP-Creative",
-  },
-];
+import team0 from "../assets/Team.jpeg";
+import team1 from "../assets/Team1.jpeg";
+import team2 from "../assets/Team2.jpeg";
+import team3 from "../assets/Team3.jpeg";
+import team4 from "../assets/Team4.jpeg";
 
+// const images = [team0, team1, team2, team3, team4];
+const images = [team0, team1,team2,  team4];
 export default function TeamSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="w-full bg-[#f3f3f3] py-16 md:py-24">
-      <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 items-start">
+      <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 items-center">
 
         {/* LEFT CONTENT */}
         <div className="text-left">
@@ -113,36 +119,31 @@ export default function TeamSection() {
           </p>
         </div>
 
-        {/* RIGHT PHOTOS – OPTIMIZED FOR 2 */}
-        <div className="flex justify-end">
-          <div className="grid grid-cols-2 gap-x-16">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <img
-                  src={placeholder}
-                  alt={member.name}
-                  className="
-                    w-[260px] h-[330px]
-                    object-cover
-                    shadow-md
-                    mb-6
-                  "
-                />
-
-                <h4 className="text-lg font-extrabold text-[#26282c]">
-                  {member.name}
-                </h4>
-
-                <p className="mt-1 text-sm font-medium text-[#26282c]/80">
-                  {member.role}
-                </p>
-              </div>
-            ))}
-          </div>
+        {/* RIGHT IMAGE ROTATOR */}
+        <div className="relative w-full max-w-[520px] h-[360px] md:h-[420px] justify-self-end overflow-hidden shadow-lg">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Team ${index}`}
+              className={`
+                absolute inset-0
+                w-full h-full
+                object-cover object-center
+                transition-all duration-1000 ease-in-out
+                ${
+                  index === activeIndex
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-105"
+                }
+              `}
+            />
+          ))}
         </div>
 
       </div>
     </section>
   );
 }
+
 
