@@ -186,18 +186,18 @@
 import React, { useState } from "react";
 
 /* ================= LOGOS ================= */
-import denzour from "../assets/denzour.webp";
-import stanley from "../assets/stanley.webp";
-import amway from "../assets/amway.webp";
-import bioderma from "../assets/bioderma.webp";
-import intuit from "../assets/intuit.webp";
-import qualys from "../assets/qualys.webp";
-import indianExpress from "../assets/indian-express.webp";
-import tataFiber from "../assets/tata.webp";
-import adani from "../assets/adani.webp";
-import musigma from "../assets/mu.webp";
-import emami from "../assets/emami.webp";
-import vodien from "../assets/vodian.webp";
+import denzour from "../assets/Frame 2.svg";
+import stanley from "../assets/Frame 3.svg";
+import amway from "../assets/Frame 4.svg";
+import bioderma from "../assets/Frame 5.svg";
+import intuit from "../assets/Frame 6.svg";
+import qualys from "../assets/Frame 7.svg";
+import indianExpress from "../assets/Frame 8.svg";
+import tataFiber from "../assets/Frame 9.svg";
+import adani from "../assets/Frame 10.svg";
+import musigma from "../assets/Frame 11.svg";
+import emami from "../assets/Frame 12.svg";
+import vodien from "../assets/frame 13.svg";
 
 /* ================= DATA ================= */
 const testimonials = [
@@ -341,12 +341,12 @@ export default function TestimonialsDark() {
           </p>
         </div>
 
-        {/* 🔥 CLIENT LOGOS */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-2 gap-y-5 items-center opacity-95">
+        {/* 🔥 CLIENT LOGOS (MORE COLUMN GAP) */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-16 md:gap-x-20 gap-y-10 items-center opacity-95">
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex justify-center items-center py-1"
+              className="flex justify-center items-center py-4"
             >
               <img
                 src={logo}
@@ -367,3 +367,4 @@ export default function TestimonialsDark() {
     </section>
   );
 }
+

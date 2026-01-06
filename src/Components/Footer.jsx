@@ -10,7 +10,7 @@ import nmsdc from "../assets/NMSDC.webp";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 import twitter from "../assets/twitter.svg";
-import linkedin from "../assets/linkedin.svg";
+import linkedin from "../assets/Linkedin1.png";
 import youtube from "../assets/youtube.svg";
 
 /* ================= FOOTER ================= */
@@ -67,14 +67,16 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">RESOURCES</h4>
             <ul className="space-y-3 text-sm">
-              <li>Ubersuggest</li>
+              {/* <li>Ubersuggest</li>
               <li>Answer The Public</li>
               <li>Marketing School</li>
               <li>Blog</li>
-              <li>Webinars</li>
-              <li className="flex justify-between">
-                Legal <span>+</span>
-              </li>
+              <li>Webinars</li> */}
+              <li>Privacy Policy</li>
+              <li>Terms of Use</li>
+              {/* <li className="flex justify-between">
+                {/* Legal <span>+</span>
+              </li> */} 
             </ul>
           </div>
 

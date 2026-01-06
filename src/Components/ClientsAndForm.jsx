@@ -205,18 +205,18 @@ import React, { useState } from "react";
 import WorkWithUsModal from "./WorkWithUsModal";
 
 // LOGOS
-import denzour from "../assets/denzour.webp";
-import stanley from "../assets/stanley.webp";
-import amway from "../assets/amway.webp";
-import bioderma from "../assets/bioderma.webp";
-import intuit from "../assets/intuit.webp";
-import qualys from "../assets/qualys.webp";
-import indianExpress from "../assets/indian-express.webp";
-import tata from "../assets/tata.webp";
-import adani from "../assets/adani.webp";
-import muSigma from "../assets/mu.webp";
-import emami from "../assets/emami.webp";
-import vodien from "../assets/vodian.webp";
+import denzour from "../assets/Frame 2.svg";
+import stanley from "../assets/Frame 3.svg";
+import amway from "../assets/Frame 4.svg";
+import bioderma from "../assets/Frame 5.svg";
+import intuit from "../assets/Frame 6.svg";
+import qualys from "../assets/Frame 7.svg";
+import indianExpress from "../assets/Frame 8.svg";
+import tata from "../assets/Frame 9.svg";
+import adani from "../assets/Frame 10.svg";
+import muSigma from "../assets/Frame 11.svg";
+import emami from "../assets/Frame 12.svg";
+import vodien from "../assets/Frame 13.svg";
 
 const logos = [
   denzour,
@@ -234,14 +234,14 @@ const logos = [
 ];
 
 const services = [
-  "AI SEO",
+  "Analytics",
   "SEO",
   "Paid media",
   "Creative",
-  "Content",
   "Social Media",
-  "App Store",
-  "Analytics",
+  "Artifial Intelligence",
+  "Content",
+  "AI SEO",
   "Other",
 ];
 
@@ -253,8 +253,15 @@ export default function ClientsAndForm() {
       <section className="relative max-w-[1400px] mx-auto px-6 pb-32">
         <div className="grid lg:grid-cols-2 gap-6 items-center">
 
-          {/* FORM */}
-          <div className="order-1 lg:order-2 bg-[#f1f1f1] text-black p-10 shadow-xl">
+          {/* FORM CONTAINER */}
+          <div className="
+            order-1 lg:order-2
+            bg-[#f1f1f1]
+            text-black
+            p-10
+            shadow-xl
+            rounded-md
+          ">
             <h3 className="text-xl font-semibold text-center mb-8">
               How can we help you get found?
             </h3>
@@ -270,11 +277,12 @@ export default function ClientsAndForm() {
                     cursor-pointer
                     hover:shadow-sm
                     transition
+                    rounded-md
                   "
                 >
                   <input
                     type="checkbox"
-                    className="accent-[#dde82d]"
+                    className="accent-[#e10051]"
                   />
                   <span className="text-sm">{item}</span>
                 </label>
@@ -290,11 +298,12 @@ export default function ClientsAndForm() {
                 block
                 w-[180px]
                 py-4
-                bg-[#dde82d]
-                text-black
+                bg-[#e10051]
+                text-white
                 text-sm
                 font-semibold
-                hover:bg-[#c7d51f]
+                rounded-md
+                hover:bg-[#c00046]
                 transition
               "
             >
@@ -330,3 +339,5 @@ export default function ClientsAndForm() {
     </>
   );
 }
+
+

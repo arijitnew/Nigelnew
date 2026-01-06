@@ -17,7 +17,8 @@ const cards = [
       "Graphic & Motion Design",
       "Audio Production",
     ],
-  },  {
+  },
+  {
     title: "Paid Media",
     icon: sixth,
     items: [
@@ -55,8 +56,6 @@ const cards = [
       "Email Marketing",
     ],
   },
-
-
 ];
 
 export default function SolutionsCards() {
@@ -66,13 +65,29 @@ export default function SolutionsCards() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-[#f3f3f3] p-8 flex flex-col items-center text-center"
+            className="
+              bg-[#f3f3f3]
+              p-8
+              flex flex-col
+              items-center
+              text-center
+              rounded-md
+            "
           >
-            <img
-              src={card.icon}
-              alt={card.title}
-              className="w-16 h-16 mb-6"
-            />
+            {/* ICON BOX */}
+            <div className="
+              w-16 h-16
+              flex items-center justify-center
+              bg-white
+              rounded-md
+              mb-6
+            ">
+              <img
+                src={card.icon}
+                alt={card.title}
+                className="w-10 h-10 object-contain"
+              />
+            </div>
 
             <h3 className="text-xl font-extrabold text-[#26282c] mb-6">
               {card.title}

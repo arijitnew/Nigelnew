@@ -83,7 +83,8 @@ import team3 from "../assets/Team3.jpeg";
 import team4 from "../assets/Team4.jpeg";
 
 // const images = [team0, team1, team2, team3, team4];
-const images = [team0, team1,team2,  team4];
+const images = [team0, team1, team2, team4];
+
 export default function TeamSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -101,7 +102,7 @@ export default function TeamSection() {
 
         {/* LEFT CONTENT */}
         <div className="text-left">
-          <p className="text-xs font-bold tracking-widest text-[#dde82d] mb-6">
+          <p className="text-xs font-bold tracking-widest text-[#e10051] mb-6">
             TEAM
           </p>
 
@@ -110,17 +111,17 @@ export default function TeamSection() {
             agency veterans.
           </h2>
 
-          <div className="w-14 h-[3px] bg-[#dde82d] mb-8" />
+          <div className="w-14 h-[3px] bg-[#e10051] mb-8" />
 
           <p className="max-w-[520px] text-base md:text-lg leading-relaxed text-[#333333]">
             Our team sets us apart as an agency. Beyond their job titles, each
             individual brings unique perspectives and passions that shape the
-            vision and values of NQ Digital India.
+            vision and values of Agency By Nigel Quadros.
           </p>
         </div>
 
         {/* RIGHT IMAGE ROTATOR */}
-        <div className="relative w-full max-w-[520px] h-[360px] md:h-[420px] justify-self-end overflow-hidden shadow-lg">
+        <div className="relative w-full max-w-[520px] h-[360px] md:h-[420px] justify-self-end overflow-hidden shadow-lg rounded-md">
           {images.map((img, index) => (
             <img
               key={index}
@@ -131,6 +132,7 @@ export default function TeamSection() {
                 w-full h-full
                 object-cover object-center
                 transition-all duration-1000 ease-in-out
+                rounded-md
                 ${
                   index === activeIndex
                     ? "opacity-100 scale-100"

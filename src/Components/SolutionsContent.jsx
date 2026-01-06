@@ -4,7 +4,7 @@ export default function SolutionsContent() {
   return (
     <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20 text-center text-white">
       
-      <p className="text-xs font-bold tracking-widest mb-4 uppercase text-black">
+      <p className="text-xs font-bold tracking-widest mb-4 uppercase text-[#dde82d]">
         Solutions
       </p>
 
@@ -12,10 +12,10 @@ export default function SolutionsContent() {
         Achieving goals.
       </h2>
 
-      <div className="w-12 h-[3px] bg-black mx-auto mb-8" />
+      <div className="w-12 h-[3px] bg-[#dde82d] mx-auto mb-8" />
 
       <p className="max-w-[900px] mx-auto text-base md:text-lg leading-relaxed text-white/90">
-        We, at NQ Digital India, understand the intent, will, time, efforts,
+        We, at Agency by Nigel Quadros, understand the intent, will, time, efforts,
         and dreams that are invested in starting and operating a business.
         Hence we leave no stone unturned in shaping it the way you aspire
         and admire. Our team of experts is always keen on formulating only

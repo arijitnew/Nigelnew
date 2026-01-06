@@ -32,11 +32,11 @@ export default function ContactSection() {
           <input
             type="email"
             placeholder="Email"
-            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none"
+            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none rounded-md"
           />
 
           {/* Phone */}
-          <div className="flex items-center bg-[#f5f5f5] px-4">
+          <div className="flex items-center bg-[#f5f5f5] px-4 rounded-md">
             <span className="mr-3 flex items-center gap-2 text-sm text-black whitespace-nowrap">
               <span>🇮🇳</span>
               <span>+91</span>
@@ -52,25 +52,25 @@ export default function ContactSection() {
           <input
             type="text"
             placeholder="First Name"
-            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none"
+            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none rounded-md"
           />
 
           {/* Last Name */}
           <input
             type="text"
             placeholder="Last Name"
-            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none"
+            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none rounded-md"
           />
 
-          {/* Interest — HALF WIDTH */}
+          {/* Interest */}
           <input
             type="text"
             placeholder="I'm interested in..."
-            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none"
+            className="bg-[#f5f5f5] text-black px-5 py-4 text-sm outline-none rounded-md"
           />
         </form>
 
-        {/* DISCLAIMER — aligned with form */}
+        {/* DISCLAIMER */}
         <div className="max-w-[1000px] mx-auto mt-8">
           <p className="text-xs text-gray-400 leading-relaxed text-left">
             By clicking the button below, you consent for NQ Digital and partners to
@@ -83,7 +83,7 @@ export default function ContactSection() {
 
         {/* SUBMIT */}
         <div className="max-w-[1000px] mx-auto mt-10 text-left">
-          <button className="bg-[#dde82d] text-black px-10 py-4 text-sm font-semibold hover:bg-[#cfd92a] transition">
+          <button className="bg-[#dde82d] text-black px-10 py-4 text-sm font-semibold rounded-md hover:bg-[#cfd92a] transition">
             Submit
           </button>
         </div>

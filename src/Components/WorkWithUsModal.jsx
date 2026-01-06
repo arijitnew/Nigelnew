@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/TRANSP.png";
+import logo from "../assets/Icon1.png";
 
 export default function WorkWithUsModal({ isOpen, onClose, title }) {
   if (!isOpen) return null;
@@ -25,7 +25,7 @@ export default function WorkWithUsModal({ isOpen, onClose, title }) {
           ✕
         </button>
 
-        {/* LOGO (IDENTICAL TO RFP) */}
+        {/* LOGO */}
         <div className="relative flex justify-center mb-1">
           <img
             src={logo}
@@ -35,7 +35,7 @@ export default function WorkWithUsModal({ isOpen, onClose, title }) {
               top-0
               h-[140px]
               object-contain
-              -translate-y-4
+              -translate-y-8
             "
           />
         </div>
@@ -117,13 +117,13 @@ export default function WorkWithUsModal({ isOpen, onClose, title }) {
 
         {/* SUBMIT */}
         <div className="flex justify-start mt-8">
-  <button
-    type="submit"
-    className="bg-[#dde82d] text-black px-10 py-3 text-sm font-semibold hover:bg-[#c7d51f] transition"
-  >
-    Submit
-  </button>
-</div>
+          <button
+            type="submit"
+            className="bg-[#dde82d] text-black px-10 py-3 text-sm font-semibold hover:bg-[#c7d51f] transition"
+          >
+            Submit
+          </button>
+        </div>
 
       </div>
     </div>
