@@ -40,6 +40,7 @@ export default function AwardsStrip() {
                 items-center
                 justify-center
                 text-center
+                rounded-[4px]
               "
             >
               <div className="text-white text-2xl font-bold mb-2">
@@ -61,5 +62,4 @@ export default function AwardsStrip() {
     </section>
   );
 }
-
 
