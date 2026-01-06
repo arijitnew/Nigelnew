@@ -73,7 +73,7 @@ export default function ContactSection() {
         {/* DISCLAIMER */}
         <div className="max-w-[1000px] mx-auto mt-8">
           <p className="text-xs text-gray-400 leading-relaxed text-left">
-            By clicking the button below, you consent for NQ Digital and partners to
+            By clicking the button below, you consent for Agency By Nigel Quadros and partners to
             use automated technology, including pre-recorded messages, cell phones
             and texts, and email to contact you at the number and email address
             provided. This includes if the number is currently on any Do Not Call

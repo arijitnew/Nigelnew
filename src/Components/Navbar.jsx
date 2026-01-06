@@ -933,12 +933,227 @@
 // }
 
 
+// import React, { useEffect, useState } from "react";
+// import icon from "../assets/TRANSP.png";
+// import whatsapp from "../assets/Whatsapp.svg";
+
+// export default function Navbar() {
+//   const [countryOpen, setCountryOpen] = useState(false);
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+//   const [scrolled, setScrolled] = useState(false);
+//   const [scrollProgress, setScrollProgress] = useState(0);
+//   const [rfpOpen, setRfpOpen] = useState(false);
+
+//   useEffect(() => {
+//     const onScroll = () => {
+//       const scrollTop = window.scrollY;
+//       const docHeight =
+//         document.documentElement.scrollHeight -
+//         document.documentElement.clientHeight;
+
+//       setScrolled(scrollTop > 20);
+//       setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
+//     };
+
+//     window.addEventListener("scroll", onScroll);
+//     return () => window.removeEventListener("scroll", onScroll);
+//   }, []);
+
+//   useEffect(() => {
+//     document.body.style.overflow = rfpOpen ? "hidden" : "auto";
+//   }, [rfpOpen]);
+
+//   return (
+//     <>
+//       {/* ================= NAVBAR ================= */}
+//       <header
+//         className={`
+//           fixed top-0 left-0 w-full z-50
+//           transition-all duration-300
+//           ${scrolled ? "bg-black/95 h-[72px]" : "bg-black h-[96px]"}
+//         `}
+//       >
+//         <div className="relative max-w-[1400px] mx-auto h-full px-6">
+//           <nav className="h-full flex items-center justify-between">
+
+//             {/* LOGO */}
+//             <div className="flex items-center gap-0 text-white shrink-0">
+//               <img
+//                 src={icon}
+//                 alt="Icon"
+//                 className={`
+//                   object-contain transition-all duration-300
+//                   ${scrolled ? "h-30 md:h-34" : "h-32 md:h-36"}
+//                 `}
+//               />
+//             </div>
+
+//             {/* DESKTOP MENU */}
+//             <div className="hidden md:flex items-center gap-6 text-sm text-white">
+//               <a href="#" className="hover:text-[#dde82d]">About</a>
+//               <a href="#" className="hover:text-[#dde82d]">Solutions & Work</a>
+//               <a href="#" className="hover:text-[#dde82d]">Careers</a>
+//               <a href="#" className="hover:text-[#dde82d]">Contact</a>
+
+//               <button
+//                 onClick={() => setRfpOpen(true)}
+//                 className="px-5 py-2 border border-[#dde82d] text-[#dde82d] rounded-md hover:bg-[#dde82d] hover:text-black transition"
+//               >
+//                 RFP
+//               </button>
+
+//               <a
+//                 href="tel:+919665064435"
+//                 className="w-10 h-10 bg-[#dde82d] rounded-md text-black flex items-center justify-center hover:bg-[#c9d63f]"
+//               >
+//                 📞
+//               </a>
+
+//               <a
+//                 href="https://wa.me/919665064435"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="w-10 h-10 bg-[#dde82d] rounded-md flex items-center justify-center hover:bg-[#c9d63f]"
+//               >
+//                 <img src={whatsapp} alt="WhatsApp" className="w-6 h-6" />
+//               </a>
+//             </div>
+
+//             {/* HAMBURGER */}
+//             <button
+//               className="md:hidden flex flex-col gap-1"
+//               onClick={() => setMobileMenuOpen(prev => !prev)}
+//             >
+//               <span className="w-6 h-[2px] bg-white rounded-md" />
+//               <span className="w-6 h-[2px] bg-white rounded-md" />
+//               <span className="w-6 h-[2px] bg-white rounded-md" />
+//             </button>
+//           </nav>
+//         </div>
+//       </header>
+
+//       {/* ================= MOBILE MENU ================= */}
+//       {mobileMenuOpen && (
+//         <div className="md:hidden fixed top-[96px] left-0 w-full bg-black z-40 border-t border-white/10">
+//           <div className="flex flex-col px-6 py-6 gap-6 text-white text-sm">
+
+//             <a href="#">About</a>
+//             <a href="#">Solutions & Work</a>
+//             <a href="#">Careers</a>
+//             <a href="#">Contact</a>
+
+//             <div className="flex w-full gap-2 mt-2">
+//               <button
+//                 onClick={() => {
+//                   setRfpOpen(true);
+//                   setMobileMenuOpen(false);
+//                 }}
+//                 className="w-1/2 py-3 border border-[#dde82d] text-[#dde82d] rounded-md font-semibold"
+//               >
+//                 RFP
+//               </button>
+
+//               <a
+//                 href="tel:+919665064435"
+//                 className="w-1/4 py-3 bg-[#dde82d] rounded-md text-black flex items-center justify-center"
+//               >
+//                 📞
+//               </a>
+
+//               <a
+//                 href="https://wa.me/919665064435"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="w-1/4 py-3 bg-[#dde82d] rounded-md flex items-center justify-center"
+//               >
+//                 <img src={whatsapp} alt="WhatsApp" className="w-5 h-5" />
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+
+//       {/* ================= SCROLL PROGRESS ================= */}
+//       <div
+//         className={`
+//           fixed left-0 w-full h-[2px]
+//           bg-white/10 z-30 pointer-events-none
+//           ${scrolled ? "top-[72px]" : "top-[96px]"}
+//         `}
+//       >
+//         <div
+//           className="h-full bg-[#dde82d] rounded-md"
+//           style={{ width: `${scrollProgress}%` }}
+//         />
+//       </div>
+
+//       {/* ================= RFP MODAL ================= */}
+//       {rfpOpen && (
+//         <div className="fixed inset-0 z-[100] flex items-center justify-center">
+//           <div
+//             className="absolute inset-0 bg-black/70"
+//             onClick={() => setRfpOpen(false)}
+//           />
+
+//           <div className="relative bg-white w-[94%] max-w-[860px] rounded-md shadow-2xl px-16 py-10 z-10">
+
+//             <button
+//               onClick={() => setRfpOpen(false)}
+//               className="absolute top-6 right-6 text-black text-2xl font-light"
+//             >
+//               ✕
+//             </button>
+
+//             <div className="relative flex justify-center mb-1">
+//               <img
+//                 src={icon}
+//                 alt="Logo"
+//                 className="absolute top-0 h-[140px] object-contain -translate-y-4"
+//               />
+//             </div>
+
+//             <h2 className="text-center text-3xl font-extrabold text-black mt-20 mb-2">
+//               RFP Form
+//             </h2>
+
+//             <p className="text-center text-sm text-black/60 mb-8">
+//               Fill out the form below to speak with someone from our team.
+//             </p>
+
+//             <form className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+//               {[
+//                 "Email",
+//                 "First Name",
+//                 "Last Name",
+//                 "Website URL?",
+//                 "Monthly Marketing Budget",
+//               ].map((placeholder, i) => (
+//                 <input
+//                   key={i}
+//                   type="text"
+//                   placeholder={placeholder}
+//                   className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm rounded-md outline-none focus:border-black"
+//                 />
+//               ))}
+//             </form>
+
+//             <div className="flex justify-end mt-8">
+//               <button className="bg-[#dde82d] rounded-md text-white px-10 py-3 text-sm font-semibold">
+//                 Submit
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// }
 import React, { useEffect, useState } from "react";
-import icon from "../assets/TRANSP.png";
+import icon from "../assets/TRANSP.png";      // Navbar logo
+import rfpIcon from "../assets/Icon1.png";    // RFP modal logo
 import whatsapp from "../assets/Whatsapp.svg";
 
 export default function Navbar() {
-  const [countryOpen, setCountryOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -960,8 +1175,9 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = rfpOpen ? "hidden" : "auto";
-  }, [rfpOpen]);
+    document.body.style.overflow =
+      rfpOpen || mobileMenuOpen ? "hidden" : "auto";
+  }, [rfpOpen, mobileMenuOpen]);
 
   return (
     <>
@@ -973,20 +1189,18 @@ export default function Navbar() {
           ${scrolled ? "bg-black/95 h-[72px]" : "bg-black h-[96px]"}
         `}
       >
-        <div className="relative max-w-[1400px] mx-auto h-full px-6">
+        <div className="max-w-[1400px] mx-auto h-full px-6">
           <nav className="h-full flex items-center justify-between">
 
             {/* LOGO */}
-            <div className="flex items-center gap-0 text-white shrink-0">
-              <img
-                src={icon}
-                alt="Icon"
-                className={`
-                  object-contain transition-all duration-300
-                  ${scrolled ? "h-30 md:h-34" : "h-32 md:h-36"}
-                `}
-              />
-            </div>
+            <img
+  src={icon}
+  alt="Logo"
+  className={`object-contain transition-all duration-300
+    ${scrolled ? "h-36 md:h-40" : "h-40 md:h-44"}
+  `}
+/>
+
 
             {/* DESKTOP MENU */}
             <div className="hidden md:flex items-center gap-6 text-sm text-white">
@@ -1004,7 +1218,7 @@ export default function Navbar() {
 
               <a
                 href="tel:+919665064435"
-                className="w-10 h-10 bg-[#dde82d] rounded-md text-black flex items-center justify-center hover:bg-[#c9d63f]"
+                className="w-10 h-10 bg-[#dde82d] rounded-md flex items-center justify-center text-black"
               >
                 📞
               </a>
@@ -1013,7 +1227,7 @@ export default function Navbar() {
                 href="https://wa.me/919665064435"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#dde82d] rounded-md flex items-center justify-center hover:bg-[#c9d63f]"
+                className="w-10 h-10 bg-[#dde82d] rounded-md flex items-center justify-center"
               >
                 <img src={whatsapp} alt="WhatsApp" className="w-6 h-6" />
               </a>
@@ -1036,13 +1250,17 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden fixed top-[96px] left-0 w-full bg-black z-40 border-t border-white/10">
           <div className="flex flex-col px-6 py-6 gap-6 text-white text-sm">
+            {["About", "Solutions & Work", "Careers", "Contact"].map(item => (
+              <a
+                key={item}
+                href="#"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
 
-            <a href="#">About</a>
-            <a href="#">Solutions & Work</a>
-            <a href="#">Careers</a>
-            <a href="#">Contact</a>
-
-            <div className="flex w-full gap-2 mt-2">
+            <div className="flex gap-2 mt-2">
               <button
                 onClick={() => {
                   setRfpOpen(true);
@@ -1055,7 +1273,7 @@ export default function Navbar() {
 
               <a
                 href="tel:+919665064435"
-                className="w-1/4 py-3 bg-[#dde82d] rounded-md text-black flex items-center justify-center"
+                className="w-1/4 py-3 bg-[#dde82d] rounded-md flex items-center justify-center text-black"
               >
                 📞
               </a>
@@ -1075,14 +1293,12 @@ export default function Navbar() {
 
       {/* ================= SCROLL PROGRESS ================= */}
       <div
-        className={`
-          fixed left-0 w-full h-[2px]
-          bg-white/10 z-30 pointer-events-none
-          ${scrolled ? "top-[72px]" : "top-[96px]"}
-        `}
+        className={`fixed left-0 w-full h-[2px] bg-white/10 z-30 ${
+          scrolled ? "top-[72px]" : "top-[96px]"
+        }`}
       >
         <div
-          className="h-full bg-[#dde82d] rounded-md"
+          className="h-full bg-[#dde82d]"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -1099,20 +1315,21 @@ export default function Navbar() {
 
             <button
               onClick={() => setRfpOpen(false)}
-              className="absolute top-6 right-6 text-black text-2xl font-light"
+              className="absolute top-6 right-6 text-2xl"
             >
               ✕
             </button>
 
-            <div className="relative flex justify-center mb-1">
+            {/* RFP LOGO */}
+            <div className="flex justify-center mb-1">
               <img
-                src={icon}
-                alt="Logo"
-                className="absolute top-0 h-[140px] object-contain -translate-y-4"
+                src={rfpIcon}
+                alt="RFP Logo"
+                className="h-[100px] object-contain"
               />
             </div>
 
-            <h2 className="text-center text-3xl font-extrabold text-black mt-20 mb-2">
+            <h2 className="text-center text-3xl font-extrabold mb-1">
               RFP Form
             </h2>
 
@@ -1120,31 +1337,42 @@ export default function Navbar() {
               Fill out the form below to speak with someone from our team.
             </p>
 
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+            {/* FORM (LIGHT BORDERS) */}
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 "Email",
                 "First Name",
                 "Last Name",
                 "Website URL?",
                 "Monthly Marketing Budget",
-              ].map((placeholder, i) => (
+              ].map((p, i) => (
                 <input
                   key={i}
-                  type="text"
-                  placeholder={placeholder}
-                  className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm rounded-md outline-none focus:border-black"
+                  placeholder={p}
+                  className="
+                    bg-gray-50
+                    border border-gray-200
+                    px-4 py-3
+                    rounded-md
+                    text-sm
+                    outline-none
+                    focus:border-gray-300
+                    focus:ring-0
+                  "
                 />
               ))}
             </form>
 
             <div className="flex justify-end mt-8">
-              <button className="bg-[#dde82d] rounded-md text-white px-10 py-3 text-sm font-semibold">
+              <button className="bg-[#dde82d] px-10 py-3 rounded-md font-semibold">
                 Submit
               </button>
             </div>
+
           </div>
         </div>
       )}
     </>
   );
 }
+
