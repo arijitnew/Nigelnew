@@ -197,7 +197,7 @@ import tataFiber from "../assets/Frame 9.svg";
 import adani from "../assets/Frame 10.svg";
 import musigma from "../assets/Frame 11.svg";
 import emami from "../assets/Frame 12.svg";
-import vodien from "../assets/frame 13.svg";
+import vodien from "../assets/Frame 13.svg";
 
 /* ================= DATA ================= */
 const testimonials = [
