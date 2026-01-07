@@ -64,9 +64,9 @@ export default function WorkWithUsModal({ isOpen, onClose, title }) {
 
           {/* PHONE */}
           <div className="flex border border-gray-200 bg-gray-50">
-            <div className="flex items-center gap-2 px-4 text-sm border-r border-gray-200">
+            {/* <div className="flex items-center gap-2 px-4 text-sm border-r border-gray-200">
               🇮🇳 <span className="text-black/70">+91</span>
-            </div>
+            </div> */}
 
             <input
               type="tel"
