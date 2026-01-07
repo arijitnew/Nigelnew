@@ -1194,13 +1194,12 @@ export default function Navbar() {
 
             {/* LOGO */}
             <img
-  src={icon}
-  alt="Logo"
-  className={`object-contain transition-all duration-300
-    ${scrolled ? "h-36 md:h-40" : "h-40 md:h-44"}
-  `}
-/>
-
+              src={icon}
+              alt="Logo"
+              className={`object-contain transition-all duration-300
+                ${scrolled ? "h-36 md:h-40" : "h-40 md:h-44"}
+              `}
+            />
 
             {/* DESKTOP MENU */}
             <div className="hidden md:flex items-center gap-6 text-sm text-white">
@@ -1233,15 +1232,28 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* HAMBURGER */}
+            {/* HAMBURGER / CLOSE */}
             <button
-              className="md:hidden flex flex-col gap-1"
+              className="md:hidden relative w-8 h-8 flex items-center justify-center"
               onClick={() => setMobileMenuOpen(prev => !prev)}
             >
-              <span className="w-6 h-[2px] bg-white rounded-md" />
-              <span className="w-6 h-[2px] bg-white rounded-md" />
-              <span className="w-6 h-[2px] bg-white rounded-md" />
+              <span
+                className={`absolute w-6 h-[2px] bg-white transition-all duration-300
+                  ${mobileMenuOpen ? "rotate-45" : "-translate-y-2"}
+                `}
+              />
+              <span
+                className={`absolute w-6 h-[2px] bg-white transition-all duration-300
+                  ${mobileMenuOpen ? "opacity-0" : "opacity-100"}
+                `}
+              />
+              <span
+                className={`absolute w-6 h-[2px] bg-white transition-all duration-300
+                  ${mobileMenuOpen ? "-rotate-45" : "translate-y-2"}
+                `}
+              />
             </button>
+
           </nav>
         </div>
       </header>
@@ -1312,7 +1324,6 @@ export default function Navbar() {
           />
 
           <div className="relative bg-white w-[94%] max-w-[860px] rounded-md shadow-2xl px-16 py-10 z-10">
-
             <button
               onClick={() => setRfpOpen(false)}
               className="absolute top-6 right-6 text-2xl"
@@ -1320,13 +1331,8 @@ export default function Navbar() {
               ✕
             </button>
 
-            {/* RFP LOGO */}
             <div className="flex justify-center mb-1">
-              <img
-                src={rfpIcon}
-                alt="RFP Logo"
-                className="h-[100px] object-contain"
-              />
+              <img src={rfpIcon} alt="RFP Logo" className="h-[100px]" />
             </div>
 
             <h2 className="text-center text-3xl font-extrabold mb-1">
@@ -1337,7 +1343,6 @@ export default function Navbar() {
               Fill out the form below to speak with someone from our team.
             </p>
 
-            {/* FORM (LIGHT BORDERS) */}
             <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 "Email",
@@ -1349,16 +1354,7 @@ export default function Navbar() {
                 <input
                   key={i}
                   placeholder={p}
-                  className="
-                    bg-gray-50
-                    border border-gray-200
-                    px-4 py-3
-                    rounded-md
-                    text-sm
-                    outline-none
-                    focus:border-gray-300
-                    focus:ring-0
-                  "
+                  className="bg-gray-50 border border-gray-200 px-4 py-3 rounded-md text-sm outline-none"
                 />
               ))}
             </form>
@@ -1368,11 +1364,11 @@ export default function Navbar() {
                 Submit
               </button>
             </div>
-
           </div>
         </div>
       )}
     </>
   );
 }
+
 
