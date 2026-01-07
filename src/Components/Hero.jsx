@@ -39,16 +39,23 @@ export default function Hero() {
         {/* MAIN HEADING */}
         <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-5xl mx-auto">
           We make sure customers find you <br />
-          everywhere from{" "}
+          everywhere that matters-from{" "}
           <span className="text-[#dde82d]">Google</span> to{" "}
-          <span className="text-[#dde82d]">ChatGPT</span>
+          <span className="text-[#dde82d]">AI-powered search</span>
         </h1>
 
         {/* SUBTEXT */}
         <p className="mt-6 text-base md:text-lg text-white/80 max-w-3xl mx-auto">
-          We help you show up everywhere customers are searching, swiping,
-          scrolling, streaming, and shopping.
+        We help brands show up where decisions are made:
+ across search engines, social feeds, AI platforms, marketplaces, streaming platforms, and beyond.If your customers are searching, scrolling, swiping, streaming, or shopping —
+ we make sure your brand is already there.
+
         </p>
+        {/* <p className="mt-6 text-base md:text-lg text-white/80 max-w-3xl mx-auto">
+        If your customers are searching, scrolling, swiping, streaming, or shopping —
+ we make sure your brand is already there.
+
+        </p> */}
 
         {/* CTA */}
         <div className="mt-10">

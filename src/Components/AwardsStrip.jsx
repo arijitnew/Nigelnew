@@ -24,7 +24,7 @@ export default function AwardsStrip() {
 
         {/* HEADING */}
         <h3 className="text-center text-white text-base md:text-lg font-semibold tracking-wide mb-10">
-          We’re A Recognized Leader And Driver Of Innovation In Performance Marketing
+        A recognized leader driving innovation in performance marketing
         </h3>
 
         {/* AWARDS GRID */}
@@ -55,7 +55,7 @@ export default function AwardsStrip() {
 
         {/* BOTTOM TEXT */}
         <p className="text-center text-white/60 text-sm md:text-base mt-6">
-          We have more than 50+ award and performance honored mentions.
+        With <strong>50+ awards and performance recognitions</strong>, our work consistently sets benchmarks across industries.
         </p>
 
       </div>

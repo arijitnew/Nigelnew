@@ -27,7 +27,7 @@ const cards = [
       "Paid Social",
       "Programmatic & Display",
       "Marketplaces",
-      "Streaming",
+      "Streaming Platforms",
     ],
   },
   {
@@ -47,8 +47,8 @@ const cards = [
     icon: fifth,
     items: [
       "AI Search Optimization",
-      "Search Engine Optimization",
-      "App Store Optimization",
+      "Search Engine Optimization(SEO)",
+      "App Store Optimization(ASO)",
       "Content Marketing",
       "Digital PR",
       "Influencer Marketing",

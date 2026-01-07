@@ -203,7 +203,7 @@ import vodien from "../assets/Frame 13.svg";
 const testimonials = [
   {
     quote:
-      "The Nigel Quadros team is full of enthusiasm and very receptive to suggestions and inputs and encourages us to contribute to make a useful team outcome.",
+      "The Nigel Quadros team brings incredible energy,remains highly receptive to feedback,and actively encourages collaboration to create outcomes that truly add value",
     author: "GWD Kids",
     rating: 5,
   },
@@ -263,7 +263,7 @@ export default function TestimonialsDark() {
         {/* HEADING */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
           Our clients’ success is our always-on <br className="hidden md:block" />
-          ad.
+          advertisement.
         </h2>
 
         {/* DIVIDER */}
@@ -342,7 +342,7 @@ export default function TestimonialsDark() {
         </div>
 
         {/* 🔥 CLIENT LOGOS (MORE COLUMN GAP) */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-16 md:gap-x-20 gap-y-10 items-center opacity-95">
+        {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-16 md:gap-x-20 gap-y-10 items-center opacity-95">
           {logos.map((logo, index) => (
             <div
               key={index}
@@ -361,7 +361,29 @@ export default function TestimonialsDark() {
               />
             </div>
           ))}
-        </div>
+        </div> */}
+{/* 🔥 CLIENT LOGOS (UNIFORM SIZE) */}
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-16 md:gap-x-20 gap-y-10 items-center opacity-95">
+  {logos.map((logo, index) => (
+    <div
+      key={index}
+      className="flex justify-center items-center h-[96px]"
+    >
+      <img
+        src={logo}
+        alt="Client logo"
+        className="
+          h-[64px]          /* 👈 SAME HEIGHT FOR ALL */
+          max-w-[180px]     /* 👈 CONTROLS WIDE LOGOS */
+          object-contain
+          grayscale
+          hover:grayscale-0
+          transition
+        "
+      />
+    </div>
+  ))}
+</div>
 
       </div>
     </section>

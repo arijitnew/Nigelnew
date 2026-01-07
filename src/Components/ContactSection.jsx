@@ -12,7 +12,7 @@ export default function ContactSection() {
 
         {/* HEADING */}
         <h2 className="text-center text-4xl md:text-5xl font-extrabold mb-6">
-          You made it!
+          You made it.
         </h2>
 
         {/* UNDERLINE */}
@@ -20,9 +20,11 @@ export default function ContactSection() {
 
         {/* DESCRIPTION */}
         <p className="max-w-[900px] mx-auto text-center text-base md:text-lg text-gray-200 mb-14 leading-relaxed">
-          Your search for a digital marketing agency ends here. Connect with us to
-          talk about your needs and see how our team can help. Fill out the form
-          below and someone from our team will be in touch shortly.
+         <p>If you’ve been searching for a digital marketing agency that actually understands performance, strategy, and execution — your search ends here.</p>
+         <p>Tell us what you’re building.</p>
+         <p>We’ll show you how to scale it.</p>
+         <p>Fill out the form below and a member of our team will get in touch shortly.
+</p>
         </p>
 
         {/* FORM */}
@@ -37,10 +39,10 @@ export default function ContactSection() {
 
           {/* Phone */}
           <div className="flex items-center bg-[#f5f5f5] px-4 rounded-md">
-            <span className="mr-3 flex items-center gap-2 text-sm text-black whitespace-nowrap">
+            {/* <span className="mr-3 flex items-center gap-2 text-sm text-black whitespace-nowrap">
               <span>🇮🇳</span>
               <span>+91</span>
-            </span>
+            </span> */}
             <input
               type="tel"
               placeholder="Phone Number"

@@ -242,7 +242,7 @@ const services = [
   "Artifial Intelligence",
   "Content",
   "AI SEO",
-  "Other",
+  "...and more",
 ];
 
 export default function ClientsAndForm() {
@@ -312,7 +312,7 @@ export default function ClientsAndForm() {
           </div>
 
           {/* LOGOS */}
-          <div className="order-2 lg:order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mt-6">
+          {/* <div className="order-2 lg:order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2 mt-6">
             {logos.map((logo, i) => (
               <div
                 key={i}
@@ -325,7 +325,34 @@ export default function ClientsAndForm() {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
+          {/* LOGOS */}
+{/* LOGOS */}
+<div className="order-2 lg:order-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-6 mt-6">
+  {logos.map((logo, i) => (
+    <div
+      key={i}
+      className="
+        flex items-center justify-center
+        h-[96px]
+        w-full
+        overflow-hidden
+      "
+    >
+      <img
+        src={logo}
+        alt=""
+        className="
+          h-[56px]
+          max-w-[140px]
+          object-contain
+          block
+        "
+      />
+    </div>
+  ))}
+</div>
+
 
         </div>
       </section>
