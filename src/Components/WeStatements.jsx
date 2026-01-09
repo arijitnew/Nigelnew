@@ -278,12 +278,8 @@ export default function WeTypingHero() {
           fontWeight: 700,
         }}
       >
-        {/* PREFIX */}
-        <span>
-          {wordIndex === 2 ? "And yes" : "We"}
-        </span>
+        <span>{wordIndex === 2 ? "And yes" : "We"}</span>
 
-        {/* TYPED WORD */}
         <span
           className="ml-[0.18em] relative inline-block transition-colors duration-300"
           style={
@@ -298,7 +294,6 @@ export default function WeTypingHero() {
         >
           {typedText}
 
-          {/* Caret */}
           {!highlight && (
             <span
               style={{
@@ -329,7 +324,6 @@ export default function WeTypingHero() {
         }}
       >
         We are the alternative to the traditional agency model.
-
       </p>
 
       {/* DIVIDER */}
@@ -343,7 +337,7 @@ export default function WeTypingHero() {
       />
 
       {/* BODY TEXT */}
-      <p
+      <div
         className="mt-0 max-w-3xl mx-auto text-center"
         style={{
           color: "rgba(38, 40, 44, 0.8)",
@@ -351,23 +345,22 @@ export default function WeTypingHero() {
           lineHeight: "1.7",
         }}
       >
-<ul class="max-w-3xl mx-auto list-disc list-inside space-y-3">
-  <li>No unnecessary layers.</li>
-  <li>No buzzword-heavy decks.</li>
-  <li>Just focused thinking, sharp execution, and results that matter.</li>
-</ul>
-<br/>
-<p class="max-w-3xl mx-auto text-left text-lg leading-relaxed">
-  We exist to create opportunities, outperform expectations, and raise the bar — not just for our clients’ businesses, but for what modern marketing should look like.
-</p>
+        {/* SAME LINES, SAME SPACING, NO BULLETS */}
+        <ul className="list-none space-y-3">
+          <li>No unnecessary layers.</li>
+          <li>No buzzword-heavy decks.</li>
+          <li>Just focused thinking, sharp execution, and results that matter.</li>
+        </ul>
 
-<p class="max-w-3xl mx-auto mt-8 text-center font-semibold text-xl">
-  When your growth matters to you, it matters just as much to us.
-</p>
+        <p className="mt-6 text-left text-lg leading-relaxed">
+          We exist to create opportunities, outperform expectations, and raise the bar — not just for our clients’ businesses, but for what modern marketing should look like.
+        </p>
 
-
-
-      </p>
+        <p className="mt-8 text-center font-semibold text-xl">
+          When your growth matters to you, it matters just as much to us.
+        </p>
+      </div>
     </section>
   );
 }
+

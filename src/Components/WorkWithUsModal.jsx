@@ -59,15 +59,11 @@ export default function WorkWithUsModal({ isOpen, onClose, title }) {
             type="email"
             placeholder="Email"
             required
-            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black rounded"
           />
 
           {/* PHONE */}
-          <div className="flex border border-gray-200 bg-gray-50">
-            {/* <div className="flex items-center gap-2 px-4 text-sm border-r border-gray-200">
-              🇮🇳 <span className="text-black/70">+91</span>
-            </div> */}
-
+          <div className="flex border border-gray-200 bg-gray-50 rounded">
             <input
               type="tel"
               inputMode="numeric"
@@ -84,25 +80,25 @@ export default function WorkWithUsModal({ isOpen, onClose, title }) {
           <input
             type="text"
             placeholder="First Name"
-            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black rounded"
           />
 
           <input
             type="text"
             placeholder="Last Name"
-            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black rounded"
           />
 
           <input
             type="url"
             placeholder="Website URL?"
-            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black rounded"
           />
 
           <input
             type="text"
             placeholder="Monthly Marketing Budget"
-            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black"
+            className="border border-gray-200 bg-gray-50 px-4 py-3 text-sm outline-none focus:border-black rounded"
           />
         </form>
 
@@ -119,12 +115,21 @@ export default function WorkWithUsModal({ isOpen, onClose, title }) {
         <div className="flex justify-start mt-8">
           <button
             type="submit"
-            className="bg-[#dde82d] text-black px-10 py-3 text-sm font-semibold hover:bg-[#c7d51f] transition"
+            className="
+              bg-[#e10051]
+              text-white
+              px-10
+              py-3
+              text-sm
+              font-semibold
+              rounded
+              hover:bg-[#c90046]
+              transition
+            "
           >
             Submit
           </button>
         </div>
-
       </div>
     </div>
   );
