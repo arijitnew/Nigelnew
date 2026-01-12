@@ -112,10 +112,11 @@ export default function TeamSection() {
           </h2>
 
           <div className="w-14 h-[3px] bg-[#e10051] mb-8" />
-          <p>Our people are our biggest differentiator.
-</p>
+          {/* <p>Our people are our biggest differentiator.
+</p> */}
           <p className="max-w-[520px] text-base md:text-lg leading-relaxed text-[#333333]">
-          Beyond titles and roles, every member of Agency by Nigel Quadros brings deep expertise, fresh perspectives, and an obsession with performance. Together, they shape the vision, culture, and standards that define how we work — and why clients stay with us.
+          Our people are our biggest differentiator.<br/>
+          Beyond titles and roles, every member of <strong>Agency by Nigel Quadros</strong> brings deep expertise, fresh perspectives, and an obsession with performance. Together, they shape the vision, culture, and standards that define how we work — and why clients stay with us.
           </p>
         </div>
 

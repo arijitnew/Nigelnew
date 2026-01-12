@@ -36,17 +36,30 @@ export default function Footer() {
   />
 
   {/* ADDRESS */}
-  <div className="md:translate-x-10 md:-translate-y-8">
-    <p className="text-sm leading-relaxed text-gray-400">
-      119, North Goa, Maharashtra,<br />
-      India 403403<br />
-      +91 96650 64435
-    </p>
+  {/* ADDRESS */}
+<div className="md:translate-x-10 md:-translate-y-8">
+  <p className="text-sm leading-relaxed text-gray-400">
+    119, North Goa, Maharashtra,<br />
+    India 403403<br />
 
-    <p className="mt-2 text-sm text-gray-400">
+    <a
+      href="tel:+919665064435"
+      className="hover:text-white transition"
+    >
+      +91 96650 64435
+    </a>
+  </p>
+
+  <p className="mt-2 text-sm">
+    <a
+      href="mailto:agency@nigelquadros.com"
+      className="text-gray-400 hover:text-white transition"
+    >
       agency@nigelquadros.com
-    </p>
-  </div>
+    </a>
+  </p>
+</div>
+
 </div>
 
 
@@ -100,11 +113,18 @@ export default function Footer() {
                 alt="Twitter"
                 className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
               /> */}
-              <img
-                src={linkedin}
-                alt="LinkedIn"
-                className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
-              />
+            <a
+  href="https://www.linkedin.com/company/nigelnquadros/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src={linkedin}
+    alt="LinkedIn"
+    className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
+  />
+</a>
+
               {/* <img
                 src={youtube}
                 alt="YouTube"
