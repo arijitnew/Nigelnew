@@ -181,7 +181,7 @@
 // }
 import React, { useEffect, useState } from "react";
 
-const WORDS = ["work hard", "move fast", "— we have fun doing it"];
+const WORDS = ["work smart", "move fast", " have fun doing it"];
 const TYPE_SPEED = 150;
 const BLINK_INTERVAL = 500;
 const BLINKS_REQUIRED = 4;
@@ -261,12 +261,12 @@ export default function WeTypingHero() {
   return (
     <section className="w-full pt-10 pb-24 px-6 bg-[#f5f6f6] text-center">
       {/* BRAND */}
-      <p
+      {/* <p
         className="text-base font-bold tracking-widest mb-6"
         style={{ color: "#e10051" }}
       >
         AGENCY BY NIGEL QUADROS
-      </p>
+      </p> */}
 
       {/* MAIN HEADLINE */}
       <h1
@@ -278,8 +278,9 @@ export default function WeTypingHero() {
           fontWeight: 700,
         }}
       >
-        <span>{wordIndex === 2 ? "And yes" : "We"}</span>
-
+        {/* <span>{wordIndex === 2 ? "And yes" : "We"}</span> */}
+       
+      <span>We</span>
         <span
           className="ml-[0.18em] relative inline-block transition-colors duration-300"
           style={
@@ -346,19 +347,23 @@ export default function WeTypingHero() {
         }}
       >
         {/* SAME LINES, SAME SPACING, NO BULLETS */}
-        <ul className="list-none space-y-3">
+        {/* <ul className="list-none space-y-3">
           <li>No unnecessary layers.</li>
           <li>No buzzword-heavy decks.</li>
           <li>Just focused thinking, sharp execution, and results that matter.</li>
-        </ul>
-
-        <p className="mt-6 text-left text-lg leading-relaxed">
+        </ul> */}
+        <p>No unnecessary layers.No buzzword-heavy decks.Just focused thinking, sharp execution, and results that matter.</p>
+        {/* <p className="mt-6 text-left text-lg leading-relaxed">
           We exist to create opportunities, outperform expectations, and raise the bar — not just for our clients’ businesses, but for what modern marketing should look like.
-        </p>
-
+        </p> */}
+        <br/>
+        <p>We exist to create opportunities, outperform expectations, and raise the bar — not just for our clients’ businesses, but for what modern marketing should look like.</p>
+{/* 
         <p className="mt-8 text-center font-semibold text-xl">
           When your growth matters to you, it matters just as much to us.
-        </p>
+        </p> */}
+        <br/>
+        <p>When your growth matters to you, it matters just as much to us.</p>
       </div>
     </section>
   );

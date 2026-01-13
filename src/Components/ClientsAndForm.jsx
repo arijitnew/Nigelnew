@@ -242,7 +242,7 @@ const services = [
   "Artifial Intelligence",
   "Content",
   "AI SEO",
-  "...and more",
+  "Something else?",
 ];
 
 export default function ClientsAndForm() {
@@ -263,7 +263,7 @@ export default function ClientsAndForm() {
             rounded-md
           ">
             <h3 className="text-xl font-semibold text-center mb-8">
-              How can we help you get found?
+            How can we help as your growth partner?
             </h3>
 
             {/* SERVICES */}
@@ -307,7 +307,7 @@ export default function ClientsAndForm() {
                 transition
               "
             >
-              Get started
+             Let’s grow!
             </button>
           </div>
 

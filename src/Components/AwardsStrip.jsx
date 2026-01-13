@@ -3,9 +3,9 @@ import React from "react";
 const awards = [
   { title: "AdAge", subtitle: "Best Workplace" },
   { title: "PMW", subtitle: "Agency of the Year" },
-  { title: "Google", subtitle: "Premier Partner" },
-  { title: "campaign", subtitle: "Global Agency of the Year" },
-  { title: "Inc.", subtitle: "Best Place to Work" },
+  { title: "Google", subtitle: "Premier Search Partner" },
+  // { title: "campaign", subtitle: "Global Agency of the Year" },
+  { title: "IncredibleGoa", subtitle: "Agency of the Year" },
 ];
 
 export default function AwardsStrip() {
@@ -23,12 +23,14 @@ export default function AwardsStrip() {
       <div className="max-w-[1400px] mx-auto px-6">
 
         {/* HEADING */}
-        <h3 className="text-center text-white text-base md:text-lg font-semibold tracking-wide mb-10">
-        A recognized leader driving innovation in performance marketing
+        <h3 className="text-center text-white text-base md:text-lg  tracking-wide mb-10">
+        A recognized impact leader <strong>driving innovation in advertising and marketing</strong> across the MENA, APAC, EMEA, & LATAM regions
         </h3>
 
         {/* AWARDS GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
           {awards.map((award, i) => (
             <div
               key={i}
@@ -55,7 +57,8 @@ export default function AwardsStrip() {
 
         {/* BOTTOM TEXT */}
         <p className="text-center text-white/60 text-sm md:text-base mt-6">
-        With <strong>50+ awards and performance recognitions</strong>, our work consistently sets benchmarks across industries.
+        With 15+ awards and performance recognitions, our work consistently sets benchmarks across industries.
+
         </p>
 
       </div>

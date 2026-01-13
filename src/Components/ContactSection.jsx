@@ -156,10 +156,10 @@ export default function ContactSection() {
           If you’ve been searching for a digital marketing agency that actually understands performance, strategy, and execution — your search ends here.
           <br />
           Tell us what you’re building.
-          <br />
+        
           We’ll show you how to scale it.
           <br />
-          Fill out the form below and a member of our team will get in touch shortly.
+          Fill out the form below, and an expert from our team will get in touch shortly.
         </p>
 
         {/* FORM */}

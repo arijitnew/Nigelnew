@@ -47,15 +47,14 @@ export default function Hero() {
         {/* SUBTEXT */}
         <p className="mt-6 text-base md:text-lg text-white/80 max-w-3xl mx-auto">
         We help brands show up where decisions are made:
- across search engines, social feeds, AI platforms, marketplaces, streaming platforms, and beyond.If your customers are searching, scrolling, swiping, streaming, or shopping —
- we make sure your brand is already there.
+ across search engines, social feeds, AI platforms, marketplaces, streaming platforms, and beyond.
 
         </p>
-        {/* <p className="mt-6 text-base md:text-lg text-white/80 max-w-3xl mx-auto">
+        <p className="mt-6 text-base md:text-lg text-white/80 max-w-3xl mx-auto">
         If your customers are searching, scrolling, swiping, streaming, or shopping —
  we make sure your brand is already there.
 
-        </p> */}
+        </p>
 
         {/* CTA */}
         <div className="mt-10">

@@ -41,7 +41,7 @@ export default function Footer() {
   <p className="text-sm leading-relaxed text-gray-400">
     119, North Goa, Maharashtra,<br />
     India 403403<br />
-
+  
     <a
       href="tel:+919665064435"
       className="hover:text-white transition"
@@ -49,7 +49,7 @@ export default function Footer() {
       +91 96650 64435
     </a>
   </p>
-
+<p></p>
   <p className="mt-2 text-sm">
     <a
       href="mailto:agency@nigelquadros.com"

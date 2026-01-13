@@ -15,8 +15,9 @@ export default function SolutionsContent() {
       <div className="w-12 h-[3px] bg-[#dde82d] mx-auto mb-8" />
 
       <p className="max-w-[900px] mx-auto text-base md:text-lg leading-relaxed text-white/90">
-<p>At Agency by Nigel Quadros, we understand what goes into building a business — the intent, effort, time, and ambition behind every decision.</p>
+<p>At our growth agency, we understand what goes into building a business. The intent, effort, time, and ambition behind every decision.</p><br/>
 <p>That’s why we approach every engagement with care, clarity, and commitment. No shortcuts. No guesswork. Just the right strategies, built around your everyday digital needs and long-term growth goals.
+
 </p>
       </p>
 

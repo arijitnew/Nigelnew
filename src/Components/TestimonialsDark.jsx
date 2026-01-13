@@ -203,8 +203,8 @@ import vodien from "../assets/Frame 13.svg";
 const testimonials = [
   {
     quote:
-      "The Nigel Quadros team brings incredible energy,remains highly receptive to feedback,and actively encourages collaboration to create outcomes that truly add value",
-    author: "GWD Kids",
+      "The Agency by Nigel Quadros team brings incredible energy, remains highly receptive to feedback, and actively encourages collaboration to create outcomes that truly add value.",
+    author: "Fernando De Guama (CEO at Peridot Ascendancy)",
     rating: 5,
   },
   {
@@ -262,8 +262,7 @@ export default function TestimonialsDark() {
 
         {/* HEADING */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
-          Our clients’ success is our always-on <br className="hidden md:block" />
-          advertisement.
+        Our clients’ success is our biggest achievement
         </h2>
 
         {/* DIVIDER */}
