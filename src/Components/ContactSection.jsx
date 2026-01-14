@@ -139,7 +139,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full py-24 px-6 text-white">
+    <section
+  id="contact"
+  className="scroll-mt-[120px] w-full py-24 px-6 text-white"
+>
+
       <div className="max-w-[1200px] mx-auto">
 
         <p className="text-center text-xs font-bold tracking-widest text-[#dde82d] mb-4">

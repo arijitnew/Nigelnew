@@ -259,7 +259,7 @@ export default function WeTypingHero() {
   }, [highlight]);
 
   return (
-    <section className="w-full pt-10 pb-24 px-6 bg-[#f5f6f6] text-center">
+    <section id="about" className="w-full pt-10 pb-24 px-6 bg-[#f5f6f6] text-center scroll-mt-[120px]">
       {/* BRAND */}
       {/* <p
         className="text-base font-bold tracking-widest mb-6"

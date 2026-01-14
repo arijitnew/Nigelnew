@@ -2263,13 +2263,30 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               {/* DESKTOP MENU */}
               <div className="hidden md:flex items-center gap-6 text-sm text-white">
-                {["About", "Solutions & Work", "Careers", "Contact"].map(
-                  (item) => (
-                    <a key={item} href="#" className="hover:text-[#dde82d]">
-                      {item}
-                    </a>
-                  )
-                )}
+              {["About", "Solutions & Work", "Careers", "Contact"].map((item) => (
+  <a
+    key={item}
+    href={
+      item === "About"
+        ? "#about"
+        : item === "Solutions & Work"
+        ? "#solutions"
+        : item === "Contact"
+        ? "#contact"
+        : item === "Careers"
+        ? "https://www.linkedin.com/company/nigelnquadros/"
+        : "#"
+    }
+    target={item === "Careers" ? "_blank" : undefined}
+    rel={item === "Careers" ? "noopener noreferrer" : undefined}
+    className="hover:text-[#dde82d]"
+  >
+    {item}
+  </a>
+))}
+
+
+
 
                 <button
                   onClick={() => setRfpOpen(true)}
@@ -2325,17 +2342,30 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden fixed top-[96px] left-0 w-full bg-black z-40 border-t border-white/10">
           <div className="flex flex-col px-6 py-6 gap-6 text-white text-sm">
-            {["About", "Solutions & Work", "Careers", "Contact"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href="#"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              )
-            )}
+          {["About", "Solutions & Work", "Careers", "Contact"].map((item) => (
+  <a
+    key={item}
+    href={
+      item === "About"
+        ? "#about"
+        : item === "Solutions & Work"
+        ? "#solutions"
+        : item === "Contact"
+        ? "#contact"
+        : item === "Careers"
+        ? "https://www.linkedin.com/company/nigelnquadros/"
+        : "#"
+    }
+    target={item === "Careers" ? "_blank" : undefined}
+    rel={item === "Careers" ? "noopener noreferrer" : undefined}
+    onClick={() => setMobileMenuOpen(false)}
+  >
+    {item}
+  </a>
+))}
+
+
+
 
             <div className="flex gap-3 mt-4 w-full">
               <button

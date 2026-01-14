@@ -39,17 +39,16 @@ export default function Footer() {
   {/* ADDRESS */}
 <div className="md:translate-x-10 md:-translate-y-8">
   <p className="text-sm leading-relaxed text-gray-400">
-    119, North Goa, Maharashtra,<br />
-    India 403403<br />
+  Goa | Delhi | U.A.E | Qatar<br/>
   
-    <a
+   
+  </p>
+<p className="mt-2 text-sm leading-relaxed text-gray-400"> <a
       href="tel:+919665064435"
       className="hover:text-white transition"
     >
       +91 96650 64435
-    </a>
-  </p>
-<p></p>
+    </a></p>
   <p className="mt-2 text-sm">
     <a
       href="mailto:agency@nigelquadros.com"
@@ -69,11 +68,36 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">COMPANY</h4>
             <ul className="space-y-3 text-sm">
-              <li>About</li>
-              <li>Solutions & Work</li>
-              <li>Careers</li>
-              <li>Contact</li>
-            </ul>
+  <li>
+    <a href="#about" className="hover:text-white transition">
+      About
+    </a>
+  </li>
+
+  <li>
+    <a href="#solutions" className="hover:text-white transition">
+      Solutions & Work
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.linkedin.com/company/nigelnquadros/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-white transition"
+    >
+      Careers
+    </a>
+  </li>
+
+  <li>
+    <a href="#contact" className="hover:text-white transition">
+      Contact
+    </a>
+  </li>
+</ul>
+
           </div>
 
           {/* ================= RESOURCES ================= */}
@@ -85,8 +109,28 @@ export default function Footer() {
               <li>Marketing School</li>
               <li>Blog</li>
               <li>Webinars</li> */}
-              <li>Privacy Policy</li>
-              <li>Terms of Use</li>
+            <li>
+  <a
+    href="https://agency.nigelquadros.com/privacy-policy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+  >
+    Privacy Policy
+  </a>
+</li>
+
+<li>
+  <a
+    href="https://agency.nigelquadros.com/terms-of-use"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+  >
+    Terms of Use
+  </a>
+</li>
+
               {/* <li className="flex justify-between">
                 {/* Legal <span>+</span>
               </li> */} 

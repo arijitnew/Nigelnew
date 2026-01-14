@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SolutionsContent() {
   return (
-    <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20 text-center text-white">
+    <div id="solutions" className="scroll-mt-[120px] max-w-[1100px] mx-auto px-6 py-16 md:py-20 text-center text-white">
       
       <p className="text-xs font-bold tracking-widest mb-4 uppercase text-[#dde82d]">
         Solutions
