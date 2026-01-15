@@ -241,7 +241,15 @@ export default function ContactSection() {
               use automated technology, including pre-recorded messages, cell phones
               and texts, and email to contact you at the number and email address
               provided. This includes if the number is currently on any Do Not Call
-              Lists. This consent is not required to make a purchase. Privacy Policy.
+              Lists. This consent is not required to make a purchase.<a
+  href="https://agency.nigelquadros.com/privacy-policy"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="underline cursor-pointer"
+>
+  Privacy Policy
+</a>.
+
             </p>
           </div>
 

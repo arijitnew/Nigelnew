@@ -2451,7 +2451,15 @@ export default function Navbar() {
               <div className="md:col-span-2 text-[10px] text-gray-500 leading-snug mt-2">
                 By clicking the button below, you consent for{" "}
                 <strong>Agency by Nigel Quadros</strong> and partners to use automated technology, including pre-recorded messages, cell phones and texts, and email to contact you at the number and email address provided. This consent is not required to make a purchase.
-                <span className="underline cursor-pointer"> Privacy Policy</span>.
+                <a
+  href="https://agency.nigelquadros.com/privacy-policy"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="underline cursor-pointer"
+>
+  Privacy Policy
+</a>.
+.
               </div>
 
               <div className="md:col-span-2 flex justify-end mt-4">
