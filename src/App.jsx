@@ -105,6 +105,95 @@
 //       </DarkSection>
 //     </>
 //   );
+// // }
+// import React from "react";
+// import { Routes, Route } from "react-router-dom";
+
+// import Navbar from "./Components/Navbar";
+// import DarkSection from "./Components/DarkSection";
+// import Hero from "./Components/Hero";
+// import ClientsAndForm from "./Components/ClientsAndForm";
+// import AwardsStrip from "./Components/AwardsStrip";
+// import WeStatements from "./Components/WeStatements";
+// import ProductCards from "./Components/ProductCards";
+// import TeamSection from "./Components/TeamSection.jsx";
+// import WireframeSection from "./Components/WireframeSection";
+// import SolutionsContent from "./Components/SolutionsContent";
+// import SolutionsCards from "./Components/SolutionsCards";
+// import WorkIntro from "./Components/WorkIntro";
+// import WorkVideos from "./Components/WorkVideos";
+// import CaseStudiesSlider from "./Components/CaseStudiesSlider";
+// import TestimonialsDark from "./Components/TestimonialsDark";
+// import RecognitionSection from "./Components/RecognitionSection";
+// import CareersSection from "./Components/CareersSection";
+// import CurrentOpenRoles from "./Components/CurrentOpenRoles";
+// import OpenRolesList from "./Components/OpenRolesList";
+// import ContactSection from "./Components/ContactSection";
+// import CTASection from "./Components/CTASection";
+// import Footer from "./Components/Footer";
+
+// // 👉 IMPORT LEGAL PAGES
+// import PrivacyPolicy from "./pages/PrivacyPolicy";
+// import TermsOfUse from "./pages/TermsOfUse";
+
+// /* ================= HOME PAGE ================= */
+// function Home() {
+//   return (
+//     <>
+//       {/* ================= DARK : HERO ================= */}
+//       <DarkSection>
+//         <Navbar />
+//         <div className="pt-[80px]">
+//           <Hero />
+//           <ClientsAndForm />
+//           <AwardsStrip />
+//         </div>
+//       </DarkSection>
+
+//       {/* ================= WHITE : MAIN CONTENT ================= */}
+//       <>
+//         <WeStatements />
+//         <TeamSection />
+
+//         <WireframeSection>
+//           <SolutionsContent />
+//           <SolutionsCards />
+//         </WireframeSection>
+//       </>
+
+//       {/* ================= CASE STUDIES ================= */}
+//       <CaseStudiesSlider />
+
+//       {/* ================= DARK : TESTIMONIALS ================= */}
+//       <DarkSection>
+//         <TestimonialsDark />
+//       </DarkSection>
+
+//       {/* ================= CONTACT ================= */}
+//       <WireframeSection>
+//         <ContactSection />
+//       </WireframeSection>
+
+//       {/* ================= CTA ================= */}
+//       <CTASection />
+
+//       {/* ================= FOOTER ================= */}
+//       <DarkSection>
+//         <Footer />
+//       </DarkSection>
+//     </>
+//   );
+// }
+
+// /* ================= APP ROUTES ================= */
+// export default function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<Home />} />
+//       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+//       <Route path="/terms-of-use" element={<TermsOfUse />} />
+//     </Routes>
+//   );
 // }
 import React from "react";
 import { Routes, Route } from "react-router-dom";
@@ -115,69 +204,25 @@ import Hero from "./Components/Hero";
 import ClientsAndForm from "./Components/ClientsAndForm";
 import AwardsStrip from "./Components/AwardsStrip";
 import WeStatements from "./Components/WeStatements";
-import ProductCards from "./Components/ProductCards";
 import TeamSection from "./Components/TeamSection.jsx";
 import WireframeSection from "./Components/WireframeSection";
 import SolutionsContent from "./Components/SolutionsContent";
 import SolutionsCards from "./Components/SolutionsCards";
-import WorkIntro from "./Components/WorkIntro";
-import WorkVideos from "./Components/WorkVideos";
 import CaseStudiesSlider from "./Components/CaseStudiesSlider";
 import TestimonialsDark from "./Components/TestimonialsDark";
-import RecognitionSection from "./Components/RecognitionSection";
-import CareersSection from "./Components/CareersSection";
-import CurrentOpenRoles from "./Components/CurrentOpenRoles";
-import OpenRolesList from "./Components/OpenRolesList";
 import ContactSection from "./Components/ContactSection";
 import CTASection from "./Components/CTASection";
 import Footer from "./Components/Footer";
 
-// 👉 IMPORT LEGAL PAGES
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 
-/* ================= HOME PAGE ================= */
-function Home() {
+/* ================= LAYOUT ================= */
+function Layout({ children }) {
   return (
     <>
-      {/* ================= DARK : HERO ================= */}
-      <DarkSection>
-        <Navbar />
-        <div className="pt-[80px]">
-          <Hero />
-          <ClientsAndForm />
-          <AwardsStrip />
-        </div>
-      </DarkSection>
-
-      {/* ================= WHITE : MAIN CONTENT ================= */}
-      <>
-        <WeStatements />
-        <TeamSection />
-
-        <WireframeSection>
-          <SolutionsContent />
-          <SolutionsCards />
-        </WireframeSection>
-      </>
-
-      {/* ================= CASE STUDIES ================= */}
-      <CaseStudiesSlider />
-
-      {/* ================= DARK : TESTIMONIALS ================= */}
-      <DarkSection>
-        <TestimonialsDark />
-      </DarkSection>
-
-      {/* ================= CONTACT ================= */}
-      <WireframeSection>
-        <ContactSection />
-      </WireframeSection>
-
-      {/* ================= CTA ================= */}
-      <CTASection />
-
-      {/* ================= FOOTER ================= */}
+      <Navbar />
+      {children}
       <DarkSection>
         <Footer />
       </DarkSection>
@@ -185,13 +230,81 @@ function Home() {
   );
 }
 
-/* ================= APP ROUTES ================= */
+/* ================= HOME ================= */
+function Home() {
+  return (
+    <>
+      <DarkSection>
+        <div className="pt-[80px]">
+          <Hero />
+          <ClientsAndForm />
+          <AwardsStrip />
+        </div>
+      </DarkSection>
+
+      <WeStatements />
+      <TeamSection />
+
+      <WireframeSection>
+        <SolutionsContent />
+        <SolutionsCards />
+      </WireframeSection>
+
+      <CaseStudiesSlider />
+
+      <DarkSection>
+        <TestimonialsDark />
+      </DarkSection>
+
+      <WireframeSection>
+        <ContactSection />
+      </WireframeSection>
+
+      <CTASection />
+    </>
+  );
+}
+
+/* ================= ROUTES ================= */
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/terms-of-use" element={<TermsOfUse />} />
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <Home />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/privacy-policy"
+        element={
+          <Layout>
+            <PrivacyPolicy />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/terms-of-use"
+        element={
+          <Layout>
+            <TermsOfUse />
+          </Layout>
+        }
+      />
+
+      {/* ✅ SAFE FALLBACK */}
+      <Route
+        path="*"
+        element={
+          <Layout>
+            <Home />
+          </Layout>
+        }
+      />
     </Routes>
   );
 }
