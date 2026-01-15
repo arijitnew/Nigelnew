@@ -12,6 +12,7 @@ import instagram from "../assets/instagram.svg";
 import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/Linkedin1.png";
 import youtube from "../assets/youtube.svg";
+import { Link } from "react-router-dom";
 
 /* ================= FOOTER ================= */
 export default function Footer() {
@@ -109,27 +110,28 @@ export default function Footer() {
               <li>Marketing School</li>
               <li>Blog</li>
               <li>Webinars</li> */}
-    <li>
-    <a
-  href="/#/privacy-policy"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Privacy Policy
-</a>
-
+<li>
+  <Link
+    to="/privacy-policy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+  >
+    Privacy Policy
+  </Link>
 </li>
 
 <li>
-<a
-  href="/#/terms-of-use"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Terms of Use
-</a>
-
+  <Link
+    to="/terms-of-use"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+  >
+    Terms of Use
+  </Link>
 </li>
+
 
 
               {/* <li className="flex justify-between">
