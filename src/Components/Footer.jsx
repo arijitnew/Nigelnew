@@ -109,27 +109,28 @@ export default function Footer() {
               <li>Marketing School</li>
               <li>Blog</li>
               <li>Webinars</li> */}
-            <li>
-  <a
-    href="https://agency.nigelquadros.com/privacy-policy"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white transition"
-  >
-    Privacy Policy
-  </a>
+    <li>
+    <a
+  href="/#/privacy-policy"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Privacy Policy
+</a>
+
 </li>
 
 <li>
-  <a
-    href="https://agency.nigelquadros.com/terms-of-use"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white transition"
-  >
-    Terms of Use
-  </a>
+<a
+  href="/#/terms-of-use"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Terms of Use
+</a>
+
 </li>
+
 
               {/* <li className="flex justify-between">
                 {/* Legal <span>+</span>
