@@ -13,30 +13,25 @@ import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/Linkedin1.png";
 import youtube from "../assets/youtube.svg";
 
-/* ================= FOOTER ================= */
+
 export default function Footer() {
   return (
     <footer className="w-full bg-gradient-to-r from-black via-black to-[#2a1205] text-gray-300">
       <div className="max-w-[1400px] mx-auto px-6 py-20">
 
-        {/* ================= TOP GRID ================= */}
+       
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
-          {/* LOGO + ADDRESS */}
-        {/* LOGO + ADDRESS */}
-{/* LOGO + ADDRESS */}
-{/* LOGO + ADDRESS */}
 <div className="flex flex-col items-start md:-mt-24">
 
-  {/* LOGO */}
+
   <img
     src={logo}
     alt="Logo"
     className="w-40 md:w-56 mb-6"
   />
 
-  {/* ADDRESS */}
-  {/* ADDRESS */}
+ 
 <div className="md:translate-x-10 md:-translate-y-8">
   <p className="text-sm leading-relaxed text-gray-400">
   Goa | Delhi | U.A.E | Qatar<br/>
@@ -64,7 +59,7 @@ export default function Footer() {
 
 
 
-          {/* ================= COMPANY ================= */}
+          
           <div>
             <h4 className="text-white font-semibold mb-4">COMPANY</h4>
             <ul className="space-y-3 text-sm">
@@ -100,15 +95,11 @@ export default function Footer() {
 
           </div>
 
-          {/* ================= RESOURCES ================= */}
+         
           <div>
             <h4 className="text-white font-semibold mb-4">RESOURCES</h4>
             <ul className="space-y-3 text-sm">
-              {/* <li>Ubersuggest</li>
-              <li>Answer The Public</li>
-              <li>Marketing School</li>
-              <li>Blog</li>
-              <li>Webinars</li> */}
+           
     <li>
   <a
     href="/privacy-policy"
@@ -132,32 +123,16 @@ export default function Footer() {
 </li>
 
 
-              {/* <li className="flex justify-between">
-                {/* Legal <span>+</span>
-              </li> */} 
+             
             </ul>
           </div>
 
-          {/* ================= SOCIAL ================= */}
+          
           <div>
             <h4 className="text-white font-semibold mb-4">SOCIAL</h4>
 
             <div className="flex items-center gap-3">
-              {/* <img
-                src={facebook}
-                alt="Facebook"
-                className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
-              />
-              <img
-                src={instagram}
-                alt="Instagram"
-                className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
-              />
-              <img
-                src={twitter}
-                alt="Twitter"
-                className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
-              /> */}
+          
             <a
   href="https://www.linkedin.com/company/nigelnquadros/"
   target="_blank"
@@ -170,17 +145,13 @@ export default function Footer() {
   />
 </a>
 
-              {/* <img
-                src={youtube}
-                alt="YouTube"
-                className="h-6 w-6 opacity-60 hover:opacity-90 transition cursor-pointer"
-              /> */}
+           
             </div>
           </div>
 
         </div>
 
-        {/* ================= PARTNER LOGOS ================= */}
+     
         <div className="mt-20 flex flex-wrap items-center justify-center gap-16">
      
         <img
