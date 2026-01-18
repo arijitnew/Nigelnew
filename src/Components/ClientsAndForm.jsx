@@ -37,7 +37,7 @@ const services = [
   "Paid media",
   "Creative",
   "Social Media",
-  "Artifial Intelligence",
+  "Artificial Intelligence",
   "Content",
   "AI SEO",
   "Something else?",
