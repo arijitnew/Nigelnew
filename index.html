@@ -14,12 +14,46 @@
     />
 
     <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2E3N6E6F8C"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2E3N6E6F8C"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2E3N6E6F8C');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2E3N6E6F8C");
+    </script>
+
+    <!-- Google Ads base tag -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-987688429"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("config", "AW-987688429");
+    </script>
+
+    <!-- Google Ads conversion helper (Outbound clicks) -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url !== "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-987688429/Uw_XCMf25-sYEO3b-9YD",
+          event_callback: callback,
+        });
+        return false;
+      }
     </script>
   </head>
 
