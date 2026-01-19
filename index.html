@@ -9,55 +9,43 @@
     <title>
       No.1 Digital Marketing & Advertising Agency | U.A.E, India, Asia - Agency by Nigel Quadros
     </title>
+
     <meta
-  name="keywords"
-  content="agency by nigel quadros, digital marketing agency in goa, digital marketing agency in dubai, digital marketing agency in bahrain, digital marketing agency in delhi, digital marketing agency in bangalore, digital marketing agency in canada, digital marketing agency in california, digital marketing agency in saudi arabia, digital marketing agency in ksa, digital marketing agency in riyadh, digital marketing agency in oman, digital marketing agency in turkey, digital marketing agency in doha, digital marketing agency in qatar"
-/>
-    
+      name="keywords"
+      content="agency by nigel quadros, digital marketing agency in goa, digital marketing agency in dubai, digital marketing agency in bahrain, digital marketing agency in delhi, digital marketing agency in bangalore, digital marketing agency in canada, digital marketing agency in california, digital marketing agency in saudi arabia, digital marketing agency in ksa, digital marketing agency in riyadh, digital marketing agency in oman, digital marketing agency in turkey, digital marketing agency in doha, digital marketing agency in qatar"
+    />
 
     <meta
       name="google-site-verification"
       content="WOX05k8LG5PYgaCFgHRYPHEgvSWPedteElnIZXV5aX4"
     />
 
-    <!-- Google Analytics (GA4) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-2E3N6E6F8C"
-    ></script>
+    <!-- Google tag (GA4 + Google Ads) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2E3N6E6F8C"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-2E3N6E6F8C");
+      function gtag(){ dataLayer.push(arguments); }
+
+      gtag('js', new Date());
+
+      /* Google Analytics 4 */
+      gtag('config', 'G-2E3N6E6F8C');
+
+      /* Google Ads */
+      gtag('config', 'AW-987688429');
     </script>
 
-    <!-- Google Ads base tag -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-987688429"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("config", "AW-987688429");
-    </script>
-
-    <!-- Google Ads conversion helper (Outbound clicks) -->
+    <!-- Google Ads conversion helper (Outbound click) -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
-          if (typeof url !== "undefined") {
+          if (typeof url !== 'undefined') {
             window.location = url;
           }
         };
-        gtag("event", "conversion", {
-          send_to: "AW-987688429/Uw_XCMf25-sYEO3b-9YD",
-          event_callback: callback,
+        gtag('event', 'conversion', {
+          send_to: 'AW-987688429/Uw_XCMf25-sYEO3b-9YD',
+          event_callback: callback
         });
         return false;
       }
@@ -69,3 +57,4 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
