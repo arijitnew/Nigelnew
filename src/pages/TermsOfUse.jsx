@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 const BrandLink = () => (
     <a
       href="https://agency.nigelquadros.com/"
@@ -11,6 +11,9 @@ const BrandLink = () => (
   );
   
 export default function TermsOfUse() {
+  useEffect(() => {
+    document.title = "Terms of Use | Agency by Nigel Quadros";
+  }, []);
   return (
     <section className="min-h-screen bg-transparent text-white px-6 py-20">
       <div className="max-w-5xl mx-auto text-left">
